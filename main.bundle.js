@@ -36,8 +36,8 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_employee_new_employee_new_employee_component__ = __webpack_require__("../../../../../src/app/components/employee/new-employee/new-employee.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_employee_list_employees_list_employees_component__ = __webpack_require__("../../../../../src/app/components/employee/list-employees/list-employees.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_login_login_component__ = __webpack_require__("../../../../../src/app/components/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_settings_settings_component__ = __webpack_require__("../../../../../src/app/components/settings/settings.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_employee_edit_employee_edit_employee_component__ = __webpack_require__("../../../../../src/app/components/employee/edit-employee/edit-employee.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_employee_edit_employee_edit_employee_component__ = __webpack_require__("../../../../../src/app/components/employee/edit-employee/edit-employee.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_register_register_component__ = __webpack_require__("../../../../../src/app/components/register/register.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -81,9 +81,9 @@ var routes = [
     { path: 'typecard', component: __WEBPACK_IMPORTED_MODULE_5__components_cart_typecard_typecard_component__["a" /* TypecardComponent */] },
     { path: 'detail-money', component: __WEBPACK_IMPORTED_MODULE_6__components_cart_detail_money_detail_money_component__["a" /* DetailMoneyComponent */] },
     { path: 'employees', component: __WEBPACK_IMPORTED_MODULE_16__components_employee_list_employees_list_employees_component__["a" /* ListEmployeesComponent */] },
+    { path: 'register', component: __WEBPACK_IMPORTED_MODULE_19__components_register_register_component__["a" /* RegisterComponent */] },
     { path: 'new-employee', component: __WEBPACK_IMPORTED_MODULE_15__components_employee_new_employee_new_employee_component__["a" /* NewEmployeeComponent */] },
-    { path: 'settings', component: __WEBPACK_IMPORTED_MODULE_18__components_settings_settings_component__["a" /* SettingsComponent */] },
-    { path: 'edit-employee/:id', component: __WEBPACK_IMPORTED_MODULE_19__components_employee_edit_employee_edit_employee_component__["a" /* EditEmployeeComponent */] }
+    { path: 'edit-employee/:id', component: __WEBPACK_IMPORTED_MODULE_18__components_employee_edit_employee_edit_employee_component__["a" /* EditEmployeeComponent */] }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
@@ -109,7 +109,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\n", ""]);
+exports.push([module.i, "\r\n", ""]);
 
 // exports
 
@@ -122,7 +122,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n    <app-navbar></app-navbar>\n    <app-back></app-back>\n    <router-outlet></router-outlet>\n</div>\n"
+module.exports = "<div class=\"container\">\r\n    <router-outlet></router-outlet>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -201,11 +201,11 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_36_ng2_opd_popup__ = __webpack_require__("../../../../ng2-opd-popup/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__multipopup_multipopup_component__ = __webpack_require__("../../../../../src/app/multipopup/multipopup.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__components_cart_confirm_cart_confirm_cart_component__ = __webpack_require__("../../../../../src/app/components/cart/confirm-cart/confirm-cart.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__components_settings_settings_component__ = __webpack_require__("../../../../../src/app/components/settings/settings.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__services_settings_service__ = __webpack_require__("../../../../../src/app/services/settings.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__components_employee_edit_employee_edit_employee_component__ = __webpack_require__("../../../../../src/app/components/employee/edit-employee/edit-employee.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__components_device_device_component__ = __webpack_require__("../../../../../src/app/components/device/device.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__services_devices_service__ = __webpack_require__("../../../../../src/app/services/devices.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__components_employee_edit_employee_edit_employee_component__ = __webpack_require__("../../../../../src/app/components/employee/edit-employee/edit-employee.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40_angularfire2_auth__ = __webpack_require__("../../../../angularfire2/auth/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41_angularfire2__ = __webpack_require__("../../../../angularfire2/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__components_register_register_component__ = __webpack_require__("../../../../../src/app/components/register/register.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43_angularfire2_database__ = __webpack_require__("../../../../angularfire2/database/index.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -251,11 +251,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+//import { SettingsComponent } from './components/settings/settings.component';
+//import { SettingsService} from './services/settings.service';
 
 
 
 
 
+var firebase = {
+    apiKey: "AIzaSyB4uDSnzoJuqvq9Lfwazu2E-5L2HokyedA",
+    authDomain: "pdv-apso.firebaseapp.com",
+    databaseURL: "https://pdv-apso.firebaseio.com",
+    projectId: "pdv-apso",
+    storageBucket: "pdv-apso.appspot.com",
+    messagingSenderId: "614708355754"
+};
 var AppModule = (function () {
     function AppModule() {
     }
@@ -290,9 +300,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_33__components_login_login_component__["a" /* LoginComponent */],
             __WEBPACK_IMPORTED_MODULE_37__multipopup_multipopup_component__["a" /* MultipopupComponent */],
             __WEBPACK_IMPORTED_MODULE_38__components_cart_confirm_cart_confirm_cart_component__["a" /* ConfirmCartComponent */],
-            __WEBPACK_IMPORTED_MODULE_39__components_settings_settings_component__["a" /* SettingsComponent */],
-            __WEBPACK_IMPORTED_MODULE_41__components_employee_edit_employee_edit_employee_component__["a" /* EditEmployeeComponent */],
-            __WEBPACK_IMPORTED_MODULE_42__components_device_device_component__["a" /* DeviceComponent */]
+            __WEBPACK_IMPORTED_MODULE_39__components_employee_edit_employee_edit_employee_component__["a" /* EditEmployeeComponent */],
+            __WEBPACK_IMPORTED_MODULE_42__components_register_register_component__["a" /* RegisterComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -300,6 +309,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_11__app_routing_module__["a" /* AppRoutingModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_forms__["b" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* ReactiveFormsModule */],
+            __WEBPACK_IMPORTED_MODULE_41_angularfire2__["a" /* AngularFireModule */].initializeApp(firebase),
             __WEBPACK_IMPORTED_MODULE_36_ng2_opd_popup__["b" /* PopupModule */].forRoot()
         ],
         providers: [
@@ -310,8 +320,9 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_17__services_client_service__["a" /* ClientService */],
             __WEBPACK_IMPORTED_MODULE_32__services_employee_service__["a" /* EmployeeService */],
             __WEBPACK_IMPORTED_MODULE_34__services_login_service__["a" /* LoginService */],
-            __WEBPACK_IMPORTED_MODULE_40__services_settings_service__["a" /* SettingsService */],
-            __WEBPACK_IMPORTED_MODULE_43__services_devices_service__["a" /* DevicesService */]
+            __WEBPACK_IMPORTED_MODULE_40_angularfire2_auth__["a" /* AngularFireAuth */],
+            __WEBPACK_IMPORTED_MODULE_43_angularfire2_database__["a" /* AngularFireDatabase */]
+            //DevicesService
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
     })
@@ -329,7 +340,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".action {\n    margin-top: 40px;\n}\n\n.image {\n    width: 200px;\n    margin-bottom: 10px;\n}\n\n.image-clients{\n    margin-bottom: 20px;\n}\n\n.image-products {\n    margin-bottom: 20px;\n}", ""]);
+exports.push([module.i, ".action {\r\n    margin-top: 40px;\r\n}\r\n\r\n.image {\r\n    width: 200px;\r\n    margin-bottom: 10px;\r\n}\r\n\r\n.image-clients{\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.image-products {\r\n    margin-bottom: 20px;\r\n}", ""]);
 
 // exports
 
@@ -342,7 +353,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/admin/admin.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1 class=\"text-center action\">Area Administrativa</h1>\n\n<div class=\"row action\">\n    <div class=\"col-sm-8 col-md-4 text-center\">\n        <div class=\"img-circle\">\n            <img src=\"assets/imagens/clients.png\" class=\"image image-clients\">\n            <div class=\"caption\">\n                <button type=\"button\" class=\"btn btn-success btn-lg\" [routerLink]=\"['/clients']\">Clientes\n                    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n                </button>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-sm-8 col-md-4 text-center\">\n        <div class=\"img-circle\">\n            <img src=\"assets/imagens/products.png\" class=\"image image-products\">\n            <div class=\"caption\">\n                <button type=\"button\" class=\"btn btn-warning btn-lg\" [routerLink]=\"['/products']\">Produtos\n                    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n                </button>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-sm-8 col-md-4 text-center\">\n      <div class=\"img-circle\">\n        <img src=\"../../../assets/imagens/funcionario.png\" class=\"image image-products\">\n        <div class=\"caption\">\n          <button type=\"button\" class=\"btn btn-info btn-lg\" [routerLink]=\"['/employees']\">Funcionário\n            <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n          </button>\n        </div>\n      </div>\n    </div>\n</div>\n"
+module.exports = "<h1 class=\"text-center action\">Area Administrativa</h1>\r\n\r\n<div class=\"row action\">\r\n    <div class=\"col-sm-8 col-md-4 text-center\">\r\n        <div class=\"img-circle\">\r\n            <img src=\"assets/imagens/clients.png\" class=\"image image-clients\">\r\n            <div class=\"caption\">\r\n                <button type=\"button\" class=\"btn btn-success btn-lg\" [routerLink]=\"['/clients']\">Clientes\r\n                    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n                </button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"col-sm-8 col-md-4 text-center\">\r\n        <div class=\"img-circle\">\r\n            <img src=\"assets/imagens/products.png\" class=\"image image-products\">\r\n            <div class=\"caption\">\r\n                <button type=\"button\" class=\"btn btn-warning btn-lg\" [routerLink]=\"['/products']\">Produtos\r\n                    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n                </button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"col-sm-8 col-md-4 text-center\">\r\n      <div class=\"img-circle\">\r\n        <img src=\"../../../assets/imagens/funcionario.png\" class=\"image image-products\">\r\n        <div class=\"caption\">\r\n          <button type=\"button\" class=\"btn btn-info btn-lg\" [routerLink]=\"['/employees']\">Funcionário\r\n            <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n          </button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -390,7 +401,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".back {\n    margin-top: -20px;\n    margin-bottom: 10px;\n}\n", ""]);
+exports.push([module.i, ".back {\r\n    margin-top: -20px;\r\n    margin-bottom: 10px;\r\n}\r\n", ""]);
 
 // exports
 
@@ -403,7 +414,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/back/back.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<button type=\"button\" class=\"btn btn-info back\" (click)=\"back()\">\n    <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>Voltar\n</button>"
+module.exports = "<button type=\"button\" class=\"btn btn-info back\" (click)=\"back()\">\r\n    <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>Voltar\r\n</button>"
 
 /***/ }),
 
@@ -472,7 +483,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/cart/confirm-cart/confirm-cart.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<th>{{cartItem.product.id}}</th>\n<td>{{cartItem.product.name}}</td>\n<td><img src={{cartItem.product.image}} width=\"40px\"></td>\n<td>{{cartItem.product.description}}</td>\n<td>R$ {{cartItem.product.price}}</td>\n<td>{{cartItem.quantity}}</td>\n<td>R$ {{cartItem.total}}</td>\n"
+module.exports = "<th>{{cartItem.product.id}}</th>\r\n<td>{{cartItem.product.name}}</td>\r\n<td><img src={{cartItem.product.image}} width=\"40px\"></td>\r\n<td>{{cartItem.product.description}}</td>\r\n<td>R$ {{cartItem.product.price}}</td>\r\n<td>{{cartItem.quantity}}</td>\r\n<td>R$ {{cartItem.total}}</td>\r\n"
 
 /***/ }),
 
@@ -530,7 +541,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".action {\n    margin-top: 40px;\n}\n\n.image-money {\n    width: 50px;\n}", ""]);
+exports.push([module.i, ".action {\r\n    margin-top: 40px;\r\n}\r\n\r\n.image-money {\r\n    width: 50px;\r\n}", ""]);
 
 // exports
 
@@ -543,7 +554,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/cart/detail-money/detail-money.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<popup #popupFinalizado (confirmClick)=\"Voltar()\" (cancelClick)=\"Cancel()\">\n  Compra finalizada com sucesso! Imprimindo nota fiscal . . .\n</popup>\n\n<h1 class=\"text-center action\">Detalhes da Compra <img src=\"assets/imagens/money.png\" class=\"image-money\"></h1>\n\n<h1>Total : R$ {{cart.total}}</h1>\n<h1>Valor Pago: R$ {{cart.total + 10}} </h1>\n<h1>Troco : R$ {{10}}</h1>\n<div class=\"row\">\n    <div class=\"col-sm-8 col-md-12 text-center\">\n        <div class=\"img-circle\">\n            <div class=\"caption\">\n                <button type=\"button\" class=\"btn btn-success btn-lg\" (click)=\"finalizarCompra()\">Finalizar Compra\n                    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n                </button>\n            </div>\n        </div>\n    </div>\n</div>\n\n\n"
+module.exports = "<popup #popupFinalizado (confirmClick)=\"Voltar()\" (cancelClick)=\"Cancel()\">\r\n  Compra finalizada com sucesso! Imprimindo nota fiscal . . .\r\n</popup>\r\n\r\n<h1 class=\"text-center action\">Detalhes da Compra <img src=\"assets/imagens/money.png\" class=\"image-money\"></h1>\r\n\r\n<h1>Total : R$ {{cart.total}}</h1>\r\n<h1>Valor Pago: R$ {{cart.total + 10}} </h1>\r\n<h1>Troco : R$ {{10}}</h1>\r\n<div class=\"row\">\r\n    <div class=\"col-sm-8 col-md-12 text-center\">\r\n        <div class=\"img-circle\">\r\n            <div class=\"caption\">\r\n                <button type=\"button\" class=\"btn btn-success btn-lg\" (click)=\"finalizarCompra()\">Finalizar Compra\r\n                    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n                </button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -645,7 +656,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/cart/information/information.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel panel-info\">\n  <div class=\"panel-heading text-center\">Informações</div>\n  <div class=\"panel-primary\">\n    <div class=\"panel-heading text-center col-md-4\">Funcionário</div>\n    <div class=\"panel-heading text-center col-md-4\">Cliente</div>\n    <div class=\"panel-heading text-center col-md-pull-4\">Data</div>\n  </div>\n  <div class=\"panel-collapse\">\n    <div class=\"panel-heading text-center col-md-4\">{{ employee.name }}</div>\n    <div class=\"panel-heading text-center col-md-4\">{{ client }}</div>\n    <div class=\"panel-heading text-center col-md-pull-4\">{{ data| date:'dd/MM/yyyy HH:mm:ss'}}</div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"panel panel-info\">\r\n  <div class=\"panel-heading text-center\">Informações</div>\r\n  <div class=\"panel-primary\">\r\n    <div class=\"panel-heading text-center col-md-4\">Funcionário</div>\r\n    <div class=\"panel-heading text-center col-md-4\">Cliente</div>\r\n    <div class=\"panel-heading text-center col-md-pull-4\">Data</div>\r\n  </div>\r\n  <div class=\"panel-collapse\">\r\n    <div class=\"panel-heading text-center col-md-4\">{{ employee.name }}</div>\r\n    <div class=\"panel-heading text-center col-md-4\">{{ client }}</div>\r\n    <div class=\"panel-heading text-center col-md-pull-4\">{{ data| date:'dd/MM/yyyy HH:mm:ss'}}</div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -725,7 +736,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/cart/item/item-cart.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<th>{{cartItem.product.id}}</th>\n<td>{{cartItem.product.name}}</td>\n<td><img src={{cartItem.product.image}} width=\"40px\"></td>\n<td>{{cartItem.product.description}}</td>\n<td>\n  R$ {{cartItem.product.price}}\n</td>\n<td>\n  <a><span class=\"glyphicon glyphicon-plus\" (click)=\"addProduct()\"></span></a>\n  {{cartItem.quantity}}\n  <a><span class=\"glyphicon glyphicon-minus\" (click)=\"removeProduct()\"></span></a>\n</td>\n<td>\n  R$ {{cartItem.total}}\n</td>\n<td>\n  <p>\n    <button class=\"btn btn-danger\" (click)=\"removeCartItem()\">\n      <span class=\"glyphicon glyphicon-trash\"></span>\n    </button>\n  </p>\n</td>\n"
+module.exports = "<th>{{cartItem.product.id}}</th>\r\n<td>{{cartItem.product.name}}</td>\r\n<td>{{cartItem.product.description}}</td>\r\n<td>\r\n  R$ {{cartItem.product.price}}\r\n</td>\r\n<td>\r\n  <a><span class=\"glyphicon glyphicon-plus\" (click)=\"addProduct()\"></span></a>\r\n  {{cartItem.quantity}}\r\n  <a><span class=\"glyphicon glyphicon-minus\" (click)=\"removeProduct()\"></span></a>\r\n</td>\r\n<td>\r\n  R$ {{cartItem.total}}\r\n</td>\r\n<td>\r\n  <p>\r\n    <button class=\"btn btn-danger\" (click)=\"removeCartItem()\">\r\n      <span class=\"glyphicon glyphicon-trash\"></span>\r\n    </button>\r\n  </p>\r\n</td>\r\n"
 
 /***/ }),
 
@@ -799,7 +810,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".total {\n    padding: 20px;\n    background-color: #00C4FF;\n}\n\n.form-item {\n    margin-top: 20px;\n    margin-bottom: 20px;\n}\n\n.label-item {\n    padding-top: 7px;\n}\n\n", ""]);
+exports.push([module.i, ".total {\r\n    padding: 20px;\r\n    background-color: #00C4FF;\r\n}\r\n\r\n.form-item {\r\n    margin-top: 20px;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.label-item {\r\n    padding-top: 7px;\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -812,7 +823,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/cart/list-itens/list-items-cart.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-information></app-information>\n\n<popup #popupEfetuarCompra (confirmClick)=\"Confirm()\" (cancelClick)=\"Cancel()\"  style=\"overflow:hidden\">\n    <div class=\"panel panel-success\">\n        <div class=\"panel-heading\">Carrinho de compras</div>\n        <table class=\"table\">\n            <thead>\n                <tr>\n                    <th>ID</th>\n                    <th>Nome</th>\n                    <th>Imagem</th>\n                    <th>Descrição</th>\n                    <th>Valor Unitário</th>\n                    <th>Quantidade</th>\n                    <th>Valor Total</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr app-confirm-cart *ngFor=\"let cartItem of cart.cartItem;\" [cartItem]=\"cartItem\"></tr>\n            </tbody>\n        </table>\n    </div>\n  <div class=\"panel panel-success panel-heading text-center\">Total = R$ {{ cart.total }}</div>\n</popup>\n\n<div class=\"panel panel-default\">\n    <div class=\"panel-heading text-center\">Inserir Produto</div>\n    <form class=\"form-inline text-center form-item\" [formGroup]=\"productForm\" (submit)=\"onSubmit()\">\n        <div class=\"form-group\">\n            <label for=\"codigo\" class=\"col-sm-3 control-label label-item\">Código:</label>\n            <div class=\"col-sm-6\">\n                <input type=\"number\" class=\"form-control\" id=\"codigo\" min='1' placeholder=\"Digite o código\"\n                       formControlName=\"codigo\" oninput=\"validity.valid||(value='');\">\n            </div>\n        </div>\n        <div class=\"form-group\">\n            <label for=\"quantidade\" class=\"col-sm-4 control-label label-item\">Quantidade:</label>\n            <div class=\"col-sm-6\">\n                <input type=\"number\" class=\"form-control\" id=\"quantidade\" min='1' placeholder=\"Digite a quantidade\"\n                       formControlName=\"quantidade\" oninput=\"validity.valid||(value='');\">\n            </div>\n        </div>\n        <div class=\"form-group\">\n            <button type=\"submit\" class=\"btn btn-primary\" [disabled]=\"productForm.invalid\">Inserir</button>\n        </div>\n    </form>\n</div>\n\n<div class=\"panel panel-danger\" *ngIf=\"cart.cartItem.length!==0\">\n  <div class=\"panel-heading text-center\">Produto Adicionado</div>\n  <div class=\"row\">\n    <div class=\"col-md-2\"><h2>{{cart.cartItem.slice().pop().product.id}}</h2></div>\n    <div class=\"col-md-8\"><h2>{{cart.cartItem.slice().pop().product.description}}</h2></div>\n    <div class=\"col-md-2\"><h2>R$ {{cart.cartItem.slice().pop().product.price}}</h2></div>\n  </div>\n</div>\n\n<div class=\"panel panel-success\">\n  <div class=\"panel-heading text-center\">Carrinho de compras</div>\n  <table class=\"table\">\n    <thead>\n    <tr>\n      <th>ID</th>\n      <th>Nome</th>\n      <th>Imagem</th>\n      <th>Descrição</th>\n      <th>Valor Unitário</th>\n      <th>Quantidade</th>\n      <th>Valor Total</th>\n      <th>Remover</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr app-item-cart *ngFor=\"let cartItem of cart.cartItem;\" [cartItem]=\"cartItem\"></tr>\n    </tbody>\n  </table>\n</div>\n<div class=\"panel panel-info text-center\">\n    <div class=\"panel-heading\"><h4>Valor total da compra : R$ {{ cart.total }} </h4></div>\n        <button id=\"bt_finaliza\" type=\"button\" class=\"btn btn-success btn-lg form-item\" (click)=\"efetuarPagamento()\"\n                *ngIf=\"cart.cartItem.length !=0\">\n            Efetuar Pagamento\n            <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n        </button>\n\n        <button id=\"bt_cancel\" type=\"button\" class=\"btn btn-danger btn-lg form-item\" (click)=\"cancelarCompra()\"\n                *ngIf=\"cart.cartItem.length !=0\">\n            Cancelar Compra\n            <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n        </button>\n</div>\n"
+module.exports = "<app-information></app-information>\r\n\r\n<popup #popupEfetuarCompra (confirmClick)=\"Confirm()\" (cancelClick)=\"Cancel()\"  style=\"overflow:hidden\">\r\n    <div class=\"panel panel-success\">\r\n        <div class=\"panel-heading\">Carrinho de compras</div>\r\n        <table class=\"table\">\r\n            <thead>\r\n                <tr>\r\n                    <th>ID</th>\r\n                    <th>Nome</th>\r\n                    <th>Imagem</th>\r\n                    <th>Descrição</th>\r\n                    <th>Valor Unitário</th>\r\n                    <th>Quantidade</th>\r\n                    <th>Valor Total</th>\r\n                </tr>\r\n            </thead>\r\n            <tbody>\r\n                <tr app-confirm-cart *ngFor=\"let cartItem of cart.cartItem;\" [cartItem]=\"cartItem\"></tr>\r\n            </tbody>\r\n        </table>\r\n    </div>\r\n  <div class=\"panel panel-success panel-heading text-center\">Total = R$ {{ cart.total }}</div>\r\n</popup>\r\n\r\n<div class=\"panel panel-default\">\r\n    <div class=\"panel-heading text-center\">Inserir Produto</div>\r\n    <form class=\"form-inline text-center form-item\" [formGroup]=\"productForm\" (submit)=\"onSubmit()\">\r\n        <div class=\"form-group\">\r\n            <label for=\"codigo\" class=\"col-sm-3 control-label label-item\">Código:</label>\r\n            <div class=\"col-sm-6\">\r\n                <input type=\"number\" class=\"form-control\" id=\"codigo\" min='1' placeholder=\"Digite o código\"\r\n                       formControlName=\"codigo\" oninput=\"validity.valid||(value='');\">\r\n            </div>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"quantidade\" class=\"col-sm-4 control-label label-item\">Quantidade:</label>\r\n            <div class=\"col-sm-6\">\r\n                <input type=\"number\" class=\"form-control\" id=\"quantidade\" min='1' placeholder=\"Digite a quantidade\"\r\n                       formControlName=\"quantidade\" oninput=\"validity.valid||(value='');\">\r\n            </div>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <button type=\"submit\" class=\"btn btn-primary\" [disabled]=\"productForm.invalid\">Inserir</button>\r\n        </div>\r\n    </form>\r\n</div>\r\n\r\n<div class=\"panel panel-danger\" *ngIf=\"cart.cartItem.length!==0\">\r\n  <div class=\"panel-heading text-center\">Produto Adicionado</div>\r\n  <div class=\"row\">\r\n    <div class=\"col-md-2\"><h2>{{cart.cartItem.slice().pop().product.id}}</h2></div>\r\n    <div class=\"col-md-8\"><h2>{{cart.cartItem.slice().pop().product.description}}</h2></div>\r\n    <div class=\"col-md-2\"><h2>R$ {{cart.cartItem.slice().pop().product.price}}</h2></div>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"panel panel-success\">\r\n  <div class=\"panel-heading text-center\">Carrinho de compras</div>\r\n  <table class=\"table\">\r\n    <thead>\r\n    <tr>\r\n      <th>ID</th>\r\n      <th>Nome</th>\r\n      <th>Imagem</th>\r\n      <th>Descrição</th>\r\n      <th>Valor Unitário</th>\r\n      <th>Quantidade</th>\r\n      <th>Valor Total</th>\r\n      <th>Remover</th>\r\n    </tr>\r\n    </thead>\r\n    <tbody>\r\n    <tr app-item-cart *ngFor=\"let cartItem of cart.cartItem;\" [cartItem]=\"cartItem\"></tr>\r\n    </tbody>\r\n  </table>\r\n</div>\r\n<div class=\"panel panel-info text-center\">\r\n    <div class=\"panel-heading\"><h4>Valor total da compra : R$ {{ cart.total }} </h4></div>\r\n        <button id=\"bt_finaliza\" type=\"button\" class=\"btn btn-success btn-lg form-item\" (click)=\"efetuarPagamento()\"\r\n                *ngIf=\"cart.cartItem.length !=0\">\r\n            Efetuar Pagamento\r\n            <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n        </button>\r\n\r\n        <button id=\"bt_cancel\" type=\"button\" class=\"btn btn-danger btn-lg form-item\" (click)=\"cancelarCompra()\"\r\n                *ngIf=\"cart.cartItem.length !=0\">\r\n            Cancelar Compra\r\n            <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n        </button>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -930,7 +941,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".action{\n    margin-top: 40px;\n}\n\n.image{\n    width: 200px;\n    margin-bottom: 10px;\n}\n\n.image1-cart{\n    margin-bottom: 20px;\n    margin-top: 20px;\n    width: 300px;\n}", ""]);
+exports.push([module.i, ".action{\r\n    margin-top: 40px;\r\n}\r\n\r\n.image{\r\n    width: 200px;\r\n    margin-bottom: 10px;\r\n}\r\n\r\n.image1-cart{\r\n    margin-bottom: 20px;\r\n    margin-top: 20px;\r\n    width: 300px;\r\n}", ""]);
 
 // exports
 
@@ -943,7 +954,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/cart/payment/payment.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1 class=\"text-center action\">Formas de Pagamentos</h1>\n<div class=\"row action\">\n    <div class=\"col-sm-8 col-md-6 text-center\">\n        <div class=\"img-circle\">\n            <img src=\"assets/imagens/card.png\" class=\"image1-cart\">\n            <div class=\"caption\">\n                <button type=\"button\" class=\"btn btn-info btn-lg\" [routerLink]=\"['/typecard']\">Cartão\n                    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n                </button>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-sm-8 col-md-6 text-center\">\n        <div class=\"img-circle\">\n            <img src=\"assets/imagens/money.png\" class=\"image\">\n            <div class=\"caption\">\n                <button type=\"button\" class=\"btn btn-success btn-lg\" [routerLink]=\"['/detail-money']\">Dinheiro\n                    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n                </button>\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"row\">\n    <div class=\"col-sm-8 col-md-12 text-center\">\n        <div class=\"img-circle\">\n            <img src=\"assets/imagens/cart.png\" class=\"image\">\n            <div class=\"caption\">\n                <button type=\"button\" class=\"btn btn-danger btn-lg\" (click)=\"cancelarCompra()\">Cancelar Venda\n                    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n                </button>\n            </div>\n        </div>\n    </div>\n</div>\n"
+module.exports = "<h1 class=\"text-center action\">Formas de Pagamentos</h1>\r\n<div class=\"row action\">\r\n    <div class=\"col-sm-8 col-md-6 text-center\">\r\n        <div class=\"img-circle\">\r\n            <img src=\"assets/imagens/card.png\" class=\"image1-cart\">\r\n            <div class=\"caption\">\r\n                <button type=\"button\" class=\"btn btn-info btn-lg\" [routerLink]=\"['/typecard']\">Cartão\r\n                    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n                </button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"col-sm-8 col-md-6 text-center\">\r\n        <div class=\"img-circle\">\r\n            <img src=\"assets/imagens/money.png\" class=\"image\">\r\n            <div class=\"caption\">\r\n                <button type=\"button\" class=\"btn btn-success btn-lg\" [routerLink]=\"['/detail-money']\">Dinheiro\r\n                    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n                </button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-sm-8 col-md-12 text-center\">\r\n        <div class=\"img-circle\">\r\n            <img src=\"assets/imagens/cart.png\" class=\"image\">\r\n            <div class=\"caption\">\r\n                <button type=\"button\" class=\"btn btn-danger btn-lg\" (click)=\"cancelarCompra()\">Cancelar Venda\r\n                    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n                </button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1005,7 +1016,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".action {\n    margin-top: 40px;\n}\n\n.image {\n    width: 200px;\n    margin-bottom: 10px;\n}\n\n.image-cart {\n    margin-bottom: 20px;\n    margin-top: 20px;\n    width: 300px;\n}\n\n.button{\n    margin-left: 20px\n}\n", ""]);
+exports.push([module.i, ".action {\r\n    margin-top: 40px;\r\n}\r\n\r\n.image {\r\n    width: 200px;\r\n    margin-bottom: 10px;\r\n}\r\n\r\n.image-cart {\r\n    margin-bottom: 20px;\r\n    margin-top: 20px;\r\n    width: 300px;\r\n}\r\n\r\n.button{\r\n    margin-left: 20px\r\n}\r\n", ""]);
 
 // exports
 
@@ -1018,7 +1029,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/cart/typecard/typecard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<popup #popupCredito (confirmClick)=\"Confirm()\" (cancelClick)=\"Cancel()\">\n    Insira o cartão de crédito\n</popup>\n<popup #popupDebito (confirmClick)=\"Confirm()\" (cancelClick)=\"Cancel()\">\n  Insira o cartão de crédito\n</popup>\n<popup #popupFinalizado (confirmClick)=\"Voltar()\" (cancelClick)=\"Cancel()\">\n    Compra finalizada com sucesso! Imprimindo nota fiscal . . .\n</popup>\n\n<h1 class=\"text-center action\">Tipo de Pagamento</h1>\n<div class=\"col-sm-8 col-md-6 text-center\">\n  <div class=\"img-circle\">\n    <img src=\"assets/imagens/debito.png\" class=\"image image-cart\">\n    <div class=\"caption\">\n      <button type=\"button\" class=\"btn btn-success btn-lg\" (click)=\"debito()\">Débito\n        <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n      </button>\n    </div>\n  </div>\n</div>\n<div class=\"col-sm-8 col-md-6 text-center\">\n  <div class=\"img-circle\">\n    <img src=\"assets/imagens/credito.png\" class=\"image image-cart\">\n    <div class=\"caption\">\n      <button type=\"button\" class=\"btn btn-success btn-lg\" (click)=\"credito()\">Crédito\n        <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n      </button>\n    </div>\n  </div>\n</div>\n<div class=\"row\">\n    <div class=\"col-sm-8 col-md-12 text-center\">\n        <div class=\"img-circle\">\n            <div class=\"caption\">\n                <button type=\"button\" class=\"btn btn-success btn-lg\" (click)=\"finalizarCompra()\" *ngIf=\"optionCard\">Finalizar Compra\n                    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n                </button>\n            </div>\n        </div>\n    </div>\n</div>\n\n"
+module.exports = "<popup #popupCredito (confirmClick)=\"Confirm()\" (cancelClick)=\"Cancel()\">\r\n    Insira o cartão de crédito\r\n</popup>\r\n<popup #popupDebito (confirmClick)=\"Confirm()\" (cancelClick)=\"Cancel()\">\r\n  Insira o cartão de crédito\r\n</popup>\r\n<popup #popupFinalizado (confirmClick)=\"Voltar()\" (cancelClick)=\"Cancel()\">\r\n    Compra finalizada com sucesso! Imprimindo nota fiscal . . .\r\n</popup>\r\n\r\n<h1 class=\"text-center action\">Tipo de Pagamento</h1>\r\n<div class=\"col-sm-8 col-md-6 text-center\">\r\n  <div class=\"img-circle\">\r\n    <img src=\"assets/imagens/debito.png\" class=\"image image-cart\">\r\n    <div class=\"caption\">\r\n      <button type=\"button\" class=\"btn btn-success btn-lg\" (click)=\"debito()\">Débito\r\n        <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n      </button>\r\n    </div>\r\n  </div>\r\n</div>\r\n<div class=\"col-sm-8 col-md-6 text-center\">\r\n  <div class=\"img-circle\">\r\n    <img src=\"assets/imagens/credito.png\" class=\"image image-cart\">\r\n    <div class=\"caption\">\r\n      <button type=\"button\" class=\"btn btn-success btn-lg\" (click)=\"credito()\">Crédito\r\n        <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n      </button>\r\n    </div>\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n    <div class=\"col-sm-8 col-md-12 text-center\">\r\n        <div class=\"img-circle\">\r\n            <div class=\"caption\">\r\n                <button type=\"button\" class=\"btn btn-success btn-lg\" (click)=\"finalizarCompra()\" *ngIf=\"optionCard\">Finalizar Compra\r\n                    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n                </button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n"
 
 /***/ }),
 
@@ -1162,7 +1173,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/client/edit-item/edit-item-client.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1 class=\"text-center action\">Editar Cliente</h1>\n\n<form class=\"form-horizontal\" [formGroup]=\"clientForm\" (submit)=\"onSubmit()\">\n    <div class=\"form-group\">\n        <label for=\"name\" class=\"col-sm-3 control-label\">Nome:</label>\n        <div class=\"col-sm-6\">\n            <input type=\"text\" class=\"form-control\" id=\"name\" placeholder=\"Digite o Nome\" formControlName=\"name\">\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"email\" class=\"col-sm-3 control-label\">Email:</label>\n        <div class=\"col-sm-6\">\n            <input type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Digite o email\"\n                   formControlName=\"email\">\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"cpf\" class=\"col-sm-3 control-label\">CPF/CNPJ:</label>\n        <div class=\"col-sm-6\">\n            <input type=\"text\" class=\"form-control\" id=\"cpf\" placeholder=\"Digite o CPF/CNPJ\" formControlName=\"cpf\">\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <div class=\"text-center\">\n            <button type=\"submit\" class=\"btn btn-danger\" [disabled]=\"clientForm.invalid\">\n                Atualizar\n            </button>\n        </div>\n    </div>\n</form>\n"
+module.exports = "<h1 class=\"text-center action\">Editar Cliente</h1>\r\n\r\n<form class=\"form-horizontal\" [formGroup]=\"clientForm\" (submit)=\"onSubmit()\">\r\n    <div class=\"form-group\">\r\n        <label for=\"name\" class=\"col-sm-3 control-label\">Nome:</label>\r\n        <div class=\"col-sm-6\">\r\n            <input type=\"text\" class=\"form-control\" id=\"name\" placeholder=\"Digite o Nome\" formControlName=\"name\">\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label for=\"email\" class=\"col-sm-3 control-label\">Email:</label>\r\n        <div class=\"col-sm-6\">\r\n            <input type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Digite o email\"\r\n                   formControlName=\"email\">\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label for=\"cpf\" class=\"col-sm-3 control-label\">CPF/CNPJ:</label>\r\n        <div class=\"col-sm-6\">\r\n            <input type=\"text\" class=\"form-control\" id=\"cpf\" placeholder=\"Digite o CPF/CNPJ\" formControlName=\"cpf\">\r\n        </div>\r\n    </div>\r\n\r\n\r\n    <div class=\"form-group\">\r\n            <label for=\"endereco\" class=\"col-sm-3 control-label\">Endereço:</label>\r\n            <div class=\"col-sm-6\">\r\n                <input type=\"email\" class=\"form-control\" id=\"endereco\" placeholder=\"Digite o Endereço\"\r\n                       formControlName=endereco>\r\n            </div>\r\n        </div>\r\n\r\n    <div class=\"form-group\">\r\n        <div class=\"text-center\">\r\n            <button type=\"submit\" class=\"btn btn-danger\" [disabled]=\"clientForm.invalid\">\r\n                Atualizar\r\n            </button>\r\n        </div>\r\n    </div>\r\n</form>\r\n"
 
 /***/ }),
 
@@ -1201,8 +1212,9 @@ var EditItemClientComponent = (function () {
             _this.clientForm = fb.group({
                 'id': [client.id],
                 'name': [client.name, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required],
-                'email': [client.email, [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].email]],
-                'cpf': [client.cpf, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required]
+                'email': [client.telefone, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required],
+                'cpf': [client.cpf, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required],
+                'endereco': [client.address, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required]
             });
         });
     }
@@ -1250,7 +1262,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/client/item/item-client.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<td>{{client.name}}</td>\n<td>{{client.email}}</td>\n<td>{{client.cpf}}</td>\n<td>\n    <button type=\"button\" class=\"btn btn-success\" [routerLink]=\"['/edit-client', client.id]\">\n        <span class=\"glyphicon glyphicon-pencil\"></span>\n    </button>\n    <button type=\"button\" class=\"btn btn-danger\" (click)=\"removeClient()\">\n        <span class=\"glyphicon glyphicon-trash\"></span>\n    </button>\n</td>"
+module.exports = "<td>{{client.name}}</td>\r\n<td>{{client.telefone}}</td>\r\n<td>{{client.cpf}}</td>\r\n<td>{{client.address}}</td>\r\n\r\n<td>\r\n    <button type=\"button\" class=\"btn btn-success\" [routerLink]=\"['/edit-client', client.id]\">\r\n        <span class=\"glyphicon glyphicon-pencil\"></span>\r\n    </button>\r\n    <button type=\"button\" class=\"btn btn-danger\" (click)=\"removeClient()\">\r\n        <span class=\"glyphicon glyphicon-trash\"></span>\r\n    </button>\r\n</td>"
 
 /***/ }),
 
@@ -1317,7 +1329,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".btn-circle {\n    border-radius: 50%;\n}", ""]);
+exports.push([module.i, ".btn-circle {\r\n    border-radius: 50%;\r\n}", ""]);
 
 // exports
 
@@ -1330,7 +1342,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/client/list-items/list-items-client.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel panel-primary\">\n    <div class=\"panel-heading text-center\">Clientes\n        <button type=\"button\" class=\"btn btn-warning btn-circle\" [routerLink]=\"['/new-client']\">\n            <span class=\"glyphicon glyphicon-plus\"></span>\n        </button>\n    </div>\n    <table class=\"table\">\n        <thead>\n        <tr>\n            <th>Nome</th>\n            <th>Email</th>\n            <th>CPF/CNPJ</th>\n            <th>Ações</th>\n        </tr>\n        </thead>\n        <tbody>\n        <tr app-item-client *ngFor=\"let client of clients;\" [client]=\"client\"\n            (removeClientEvent)=\"onRemoveClient()\"></tr>\n        </tbody>\n    </table>\n</div>\n"
+module.exports = "<div class=\"panel panel-primary\">\r\n    <div class=\"panel-heading text-center\">Clientes\r\n        <button type=\"button\" class=\"btn btn-warning btn-circle\" [routerLink]=\"['/new-client']\">\r\n            <span class=\"glyphicon glyphicon-plus\"></span>\r\n        </button>\r\n    </div>\r\n    <table class=\"table\">\r\n        <thead>\r\n        <tr>\r\n            <th>Nome</th>\r\n            <th>Telefone</th>\r\n            <th>CPF/CNPJ</th>\r\n            <th>Endereço</th>\r\n            <th>Ações</th>\r\n        </tr>\r\n        </thead>\r\n        \r\n        <tbody>\r\n        \r\n            <tr app-item-client *ngFor=\"let client of clients;\" [client]=\"client\"\r\n        \r\n            (removeClientEvent)=\"onRemoveClient()\"></tr>\r\n        </tbody>\r\n    </table>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1387,7 +1399,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".action {\n    margin-top: 40px;\n    margin-bottom: 40px;\n}", ""]);
+exports.push([module.i, ".action {\r\n    margin-top: 40px;\r\n    margin-bottom: 40px;\r\n}", ""]);
 
 // exports
 
@@ -1400,7 +1412,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/client/new-client/new-client.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1 class=\"text-center action\">Cadastrar Cliente</h1>\n\n<form class=\"form-horizontal\" [formGroup]=\"clientForm\" (submit)=\"onSubmit()\">\n    <div class=\"form-group\">\n        <label for=\"name\" class=\"col-sm-3 control-label\">Nome:</label>\n        <div class=\"col-sm-6\">\n            <input type=\"text\" class=\"form-control\" id=\"name\" placeholder=\"Digite o Nome\" formControlName=\"name\">\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"email\" class=\"col-sm-3 control-label\">Email:</label>\n        <div class=\"col-sm-6\">\n            <input type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Digite o email\"\n                   formControlName=\"email\">\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"cpf\" class=\"col-sm-3 control-label\">CPF:</label>\n        <div class=\"col-sm-6\">\n            <input type=\"text\" class=\"form-control\" id=\"cpf\" value = \"{{ frase }}\" formControlName=\"cpf\">\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <div class=\"text-center\">\n            <button type=\"submit\" class=\"btn btn-danger\" [disabled]=\"clientForm.invalid\" *ngIf=\"path\">\n                Cadastrar e\n                Iniciar Venda\n            </button>\n            <button type=\"submit\" class=\"btn btn-danger\" [disabled]=\"clientForm.invalid\" *ngIf=\"!path\">\n                Cadastrar\n            </button>\n        </div>\n    </div>\n</form>\n"
+module.exports = "<h1 class=\"text-center action\">Cadastrar Cliente</h1>\r\n\r\n<form class=\"form-horizontal\" [formGroup]=\"clientForm\" (submit)=\"onSubmit()\">\r\n    <div class=\"form-group\">\r\n        <label for=\"name\" class=\"col-sm-3 control-label\">Nome:</label>\r\n        <div class=\"col-sm-6\">\r\n            <input type=\"text\" class=\"form-control\" id=\"name\" placeholder=\"Digite o Nome\" formControlName=\"name\">\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label for=\"email\" class=\"col-sm-3 control-label\">Email:</label>\r\n        <div class=\"col-sm-6\">\r\n            <input type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Digite o email\"\r\n                   formControlName=\"email\">\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label for=\"cpf\" class=\"col-sm-3 control-label\">CPF:</label>\r\n        <div class=\"col-sm-6\">\r\n            <input type=\"text\" class=\"form-control\" id=\"cpf\" value = \"{{ frase }}\" placeholder=\"Digite email\"  formControlName=\"cpf\">\r\n        </div>\r\n    </div>\r\n    <div class=\"form-group\">\r\n            <label for=\"endereco\" class=\"col-sm-3 control-label\"> Endereço:</label>\r\n            <div class=\"col-sm-6\">\r\n                <input type=\"text\" class=\"form-control\" id=\"endereco\" placeholder=\"Digite o endereço \" formControlName=\"endereco\">\r\n            </div>\r\n        </div>\r\n\r\n    <div class=\"form-group\">\r\n        <div class=\"text-center\">\r\n            <button type=\"submit\" class=\"btn btn-danger\" [disabled]=\"clientForm.invalid\" *ngIf=\"path\">\r\n                Cadastrar e\r\n                Iniciar Venda\r\n            </button>\r\n            <button type=\"submit\" class=\"btn btn-danger\"  *ngIf=\"!path\">\r\n                Cadastrar\r\n            </button>\r\n        </div>\r\n    </div>\r\n</form>\r\n"
 
 /***/ }),
 
@@ -1440,8 +1452,9 @@ var NewClientComponent = (function () {
         this.searchService = searchService;
         this.clientForm = fb.group({
             'name': ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required],
-            'email': ['', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].email]],
-            'cpf': ['', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required]]
+            'telefone': ['', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required]],
+            'cpf': ['', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required]],
+            'endereco': ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required],
         });
     }
     // salva o cliente
@@ -1493,7 +1506,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".action {\n    margin-top: 40px;\n    margin-bottom: 40px;\n}", ""]);
+exports.push([module.i, ".action {\r\n    margin-top: 40px;\r\n    margin-bottom: 40px;\r\n}", ""]);
 
 // exports
 
@@ -1506,7 +1519,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/client/search-client/search-client.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1 class=\"text-center action\">Buscar Cliente</h1>\n\n<form class=\"form-horizontal\" [formGroup]=\"searchForm\"\n      [ngClass]=\"{'has-error': searchForm.get('cpf').invalid && searchForm.get('cpf').dirty   }\">\n    <div class=\"form-group\">\n        <label for=\"cpf\" class=\"col-sm-3 control-label\">CPF/CNPJ:</label>\n        <div class=\"col-sm-6\">\n            <input type=\"text\" class=\"form-control\" id=\"cpf\" placeholder=\"Digite o CPF/CNPJ\" formControlName=\"cpf\">\n        </div>\n    </div>\n\n    <div *ngIf=\"clientSearch\">\n        <div class=\"form-group\">\n            <label for=\"name\" class=\"col-sm-3 control-label\">Nome:</label>\n            <div class=\"col-sm-6\">\n                <input type=\"text\" class=\"form-control\" id=\"name\" placeholder=\"Digite o Nome\" formControlName=\"name\">\n            </div>\n        </div>\n\n        <div class=\"form-group\">\n            <label for=\"email\" class=\"col-sm-3 control-label\">Email:</label>\n            <div class=\"col-sm-6\">\n                <input type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Digite o email\"\n                       formControlName=\"email\">\n            </div>\n        </div>\n    </div>\n    <div class=\"form-group\">\n        <div class=\"text-center\">\n            <button type=\"button\" class=\"btn btn-success\" *ngIf=\"clientSearch\" [routerLink]=\"['/cart']\">Iniciar Venda\n            </button>\n            <button type=\"button\" class=\"btn btn-success\" *ngIf=\"!clientSearch\" [routerLink]=\"['/cart']\">Iniciar Venda\n                sem Cadastro\n            </button>\n            <button type=\"button\" class=\"btn btn-danger\" *ngIf=\"!clientSearch\" [routerLink]=\"['/new-client/true']\">\n                Cadastrar\n                Cliente\n            </button>\n        </div>\n    </div>\n\n</form>\n"
+module.exports = "<h1 class=\"text-center action\">Buscar Cliente</h1>\r\n\r\n<form class=\"form-horizontal\" [formGroup]=\"searchForm\"\r\n      [ngClass]=\"{'has-error': searchForm.get('cpf').invalid && searchForm.get('cpf').dirty   }\">\r\n    <div class=\"form-group\">\r\n        <label for=\"cpf\" class=\"col-sm-3 control-label\">CPF/CNPJ:</label>\r\n        <div class=\"col-sm-6\">\r\n            <input type=\"text\" class=\"form-control\" id=\"cpf\" placeholder=\"Digite o CPF/CNPJ\" formControlName=\"cpf\">\r\n        </div>\r\n    </div>\r\n\r\n    <div *ngIf=\"clientSearch\">\r\n        <div class=\"form-group\">\r\n            <label for=\"name\" class=\"col-sm-3 control-label\">Nome:</label>\r\n            <div class=\"col-sm-6\">\r\n                <input type=\"text\" class=\"form-control\" id=\"name\" placeholder=\"Digite o Nome\" formControlName=\"name\">\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n            <label for=\"telefone\" class=\"col-sm-3 control-label\">Telefone:</label>\r\n            <div class=\"col-sm-6\">\r\n                <input type=\"text\" class=\"form-control\" id=\"telefone\" placeholder=\"Digite o Telefone\"\r\n                       formControlName=\"Telefone\">\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <div class=\"text-center\">\r\n            <button type=\"button\" class=\"btn btn-success\" *ngIf=\"clientSearch\" [routerLink]=\"['/cart']\">Iniciar Venda\r\n            </button>\r\n            <button type=\"button\" class=\"btn btn-success\" *ngIf=\"!clientSearch\" [routerLink]=\"['/cart']\">Iniciar Venda\r\n                sem Cadastro\r\n            </button>\r\n            <button type=\"button\" class=\"btn btn-danger\" *ngIf=\"!clientSearch\" [routerLink]=\"['/new-client/true']\">\r\n                Cadastrar\r\n                Cliente\r\n            </button>\r\n        </div>\r\n    </div>\r\n\r\n</form>\r\n"
 
 /***/ }),
 
@@ -1543,8 +1556,9 @@ var SearchClientComponent = (function () {
         this.searchService = searchService;
         this.searchForm = fb.group({
             'name': [{ value: '', disabled: true }],
-            'email': [{ value: '', disabled: true }],
+            'telefone': [{ value: '', disabled: true }],
             'cpf': ['', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required, this.validateCPFeCNPJ()]],
+            'address': [{ value: '', disabled: true }],
         });
         this.search();
     }
@@ -1560,7 +1574,7 @@ var SearchClientComponent = (function () {
             _this.searchService.setCPF(cpf);
             if (clientSearch) {
                 _this.clientSearch = true;
-                _this.searchForm.patchValue({ name: clientSearch.name, email: clientSearch.email });
+                _this.searchForm.patchValue({ name: clientSearch.name, email: clientSearch.telefone });
             }
             else {
                 _this.clientSearch = false;
@@ -1600,89 +1614,6 @@ var _a, _b, _c;
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/device/device.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/device/device.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<td>{{device.id}}</td>\n<td>{{device.ip}}</td>\n<td>{{device.port}}</td>\n<td>{{device.name}}</td>\n<td>{{device.mac}}</td> "
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/device/device.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DeviceComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_devices_service__ = __webpack_require__("../../../../../src/app/services/devices.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_device__ = __webpack_require__("../../../../../src/app/models/device.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_settings_service__ = __webpack_require__("../../../../../src/app/services/settings.service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var DeviceComponent = (function () {
-    function DeviceComponent(deviceService, settingsService) {
-        this.deviceService = deviceService;
-        this.settingsService = settingsService;
-        this.devices = new Array();
-        this.deviceService = deviceService;
-        this.settingsService = settingsService;
-    }
-    DeviceComponent.prototype.ngOnInit = function () {
-        this.devices = this.deviceService.devices;
-    };
-    return DeviceComponent;
-}());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__models_device__["a" /* Device */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__models_device__["a" /* Device */]) === "function" && _a || Object)
-], DeviceComponent.prototype, "device", void 0);
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
-    __metadata("design:type", Object)
-], DeviceComponent.prototype, "devices", void 0);
-DeviceComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: '[app-device]',
-        template: __webpack_require__("../../../../../src/app/components/device/device.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/device/device.component.css")],
-        providers: [__WEBPACK_IMPORTED_MODULE_1__services_devices_service__["a" /* DevicesService */]]
-    }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_devices_service__["a" /* DevicesService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_devices_service__["a" /* DevicesService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_settings_service__["a" /* SettingsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_settings_service__["a" /* SettingsService */]) === "function" && _c || Object])
-], DeviceComponent);
-
-var _a, _b, _c;
-//# sourceMappingURL=device.component.js.map
-
-/***/ }),
-
 /***/ "../../../../../src/app/components/employee/edit-employee/edit-employee.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1704,7 +1635,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/employee/edit-employee/edit-employee.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1 class=\"text-center action\">Editar Funcionário</h1>\n\n<popup #popupEditarEmpregadoSucesso (confirmClick)=\"Confirm()\"  style=\"overflow:hidden\">\n  Funcionário Atualizado com Sucesso!\n</popup>\n\n<form class=\"form-horizontal\" [formGroup]=\"employeeForm\" (submit)=\"onSubmit()\">\n  <div class=\"form-group\">\n    <label for=\"name\" class=\"col-sm-3 control-label\">Nome:</label>\n    <div class=\"col-sm-6\">\n      <input type=\"text\" class=\"form-control\" id=\"name\" placeholder=\"Digite o Nome\" formControlName=\"name\">\n    </div>\n  </div>\n\n  <div class=\"form-group\">\n    <label for=\"email\" class=\"col-sm-3 control-label\">Email:</label>\n    <div class=\"col-sm-6\">\n      <input type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Digite o email\"\n             formControlName=\"email\">\n    </div>\n  </div>\n\n  <div class=\"form-group\">\n    <label for=\"cpf\" class=\"col-sm-3 control-label\">CPF/CNPJ:</label>\n    <div class=\"col-sm-6\">\n      <input type=\"text\" class=\"form-control\" id=\"cpf\" placeholder=\"Digite o CPF/CNPJ\" formControlName=\"cpf\">\n    </div>\n  </div>\n\n  <div class=\"form-group\">\n    <div class=\"text-center\">\n      <button type=\"submit\" class=\"btn btn-danger\" [disabled]=\"employeeForm.invalid\">\n        Atualizar\n      </button>\n    </div>\n  </div>\n</form>\n"
+module.exports = "<h1 class=\"text-center action\">Editar Funcionário</h1>\r\n\r\n<popup #popupEditarEmpregadoSucesso (confirmClick)=\"Confirm()\"  style=\"overflow:hidden\">\r\n  Funcionário Atualizado com Sucesso!\r\n</popup>\r\n\r\n<form class=\"form-horizontal\" [formGroup]=\"employeeForm\" (submit)=\"onSubmit()\">\r\n  <div class=\"form-group\">\r\n    <label for=\"name\" class=\"col-sm-3 control-label\">Nome:</label>\r\n    <div class=\"col-sm-6\">\r\n      <input type=\"text\" class=\"form-control\" id=\"name\" placeholder=\"Digite o Nome\" formControlName=\"name\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"email\" class=\"col-sm-3 control-label\">Email:</label>\r\n    <div class=\"col-sm-6\">\r\n      <input type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Digite o email\"\r\n             formControlName=\"email\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"cpf\" class=\"col-sm-3 control-label\">CPF/CNPJ:</label>\r\n    <div class=\"col-sm-6\">\r\n      <input type=\"text\" class=\"form-control\" id=\"cpf\" placeholder=\"Digite o CPF/CNPJ\" formControlName=\"cpf\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <div class=\"text-center\">\r\n      <button type=\"submit\" class=\"btn btn-danger\" [disabled]=\"employeeForm.invalid\">\r\n        Atualizar\r\n      </button>\r\n    </div>\r\n  </div>\r\n</form>\r\n"
 
 /***/ }),
 
@@ -1809,7 +1740,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/employee/item-employee/item-employee.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<td>{{employee.name}}</td>\n<td>{{employee.email}}</td>\n<td>{{employee.cpf}}</td>\n<td>\n  <button type=\"button\" class=\"btn btn-success\" [routerLink]=\"['/edit-employee', employee.id]\">\n    <span class=\"glyphicon glyphicon-pencil\"></span>\n  </button>\n  <button type=\"button\" class=\"btn btn-danger\" (click)=\"removeEmployee()\">\n    <span class=\"glyphicon glyphicon-trash\"></span>\n  </button>\n</td>\n"
+module.exports = "<td>{{employee.name}}</td>\r\n<td>{{employee.email}}</td>\r\n<td>{{employee.cpf}}</td>\r\n<td>\r\n  <button type=\"button\" class=\"btn btn-success\" [routerLink]=\"['/edit-employee', employee.id]\">\r\n    <span class=\"glyphicon glyphicon-pencil\"></span>\r\n  </button>\r\n  <button type=\"button\" class=\"btn btn-danger\" (click)=\"removeEmployee()\">\r\n    <span class=\"glyphicon glyphicon-trash\"></span>\r\n  </button>\r\n</td>\r\n"
 
 /***/ }),
 
@@ -1880,7 +1811,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".btn-circle {\n  border-radius: 50%;\n}\n", ""]);
+exports.push([module.i, ".btn-circle {\r\n  border-radius: 50%;\r\n}\r\n", ""]);
 
 // exports
 
@@ -1893,7 +1824,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/employee/list-employees/list-employees.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel panel-primary\">\n  <div class=\"panel-heading text-center\">Funcionários\n    <button type=\"button\" class=\"btn btn-warning btn-circle\" [routerLink]=\"['/new-employee']\">\n      <span class=\"glyphicon glyphicon-plus\"></span>\n    </button>\n  </div>\n  <table class=\"table\">\n    <thead>\n    <tr>\n      <th>Nome</th>\n      <th>Email</th>\n      <th>CPF</th>\n      <th>Ações</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr app-item-employee *ngFor=\"let employee of employees;\" [employee] = \"employee\"\n        (removeEmployeeEvent)=\"onRemoveEmployee()\"></tr>\n    </tbody>\n  </table>\n</div>\n"
+module.exports = "<div class=\"panel panel-primary\">\r\n  <div class=\"panel-heading text-center\">Funcionários\r\n    <button type=\"button\" class=\"btn btn-warning btn-circle\" [routerLink]=\"['/new-employee']\">\r\n      <span class=\"glyphicon glyphicon-plus\"></span>\r\n    </button>\r\n  </div>\r\n  <table class=\"table\">\r\n    <thead>\r\n    <tr>\r\n      <th>Nome</th>\r\n      <th>Email</th>\r\n      <th>CPF</th>\r\n      <th>Ações</th>\r\n    </tr>\r\n    </thead>\r\n    <tbody>\r\n    <tr app-item-employee *ngFor=\"let employee of employees;\" [employee] = \"employee\"\r\n        (removeEmployeeEvent)=\"onRemoveEmployee()\"></tr>\r\n    </tbody>\r\n  </table>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1960,7 +1891,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".action {\n  margin-top: 40px;\n  margin-bottom: 40px;\n}\n", ""]);
+exports.push([module.i, ".action {\r\n  margin-top: 40px;\r\n  margin-bottom: 40px;\r\n}\r\n", ""]);
 
 // exports
 
@@ -1973,7 +1904,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/employee/new-employee/new-employee.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1 class=\"text-center action\">Cadastrar Funcionário</h1>\n\n<popup #popupNovoEmpregadoSucesso (confirmClick)=\"Confirm()\"  style=\"overflow:hidden\">\n     Funcionário Cadastrado com Sucesso!\n</popup>\n\n<form class=\"form-horizontal\" [formGroup]=\"employeeForm\" (submit)=\"onSubmit()\">\n  <div class=\"form-group\">\n    <label for=\"name\" class=\"col-sm-3 control-label\">Nome:</label>\n    <div class=\"col-sm-6\">\n      <input type=\"text\" class=\"form-control\" id=\"name\" placeholder=\"Digite o Nome\" formControlName=\"name\">\n    </div>\n  </div>\n\n  <div class=\"form-group\">\n    <label for=\"email\" class=\"col-sm-3 control-label\">Email:</label>\n    <div class=\"col-sm-6\">\n      <input type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Digite o email\"\n             formControlName=\"email\">\n    </div>\n  </div>\n\n  <div class=\"form-group\">\n    <label for=\"cpf\" class=\"col-sm-3 control-label\">CPF:</label>\n    <div class=\"col-sm-6\">\n      <input type=\"text\" class=\"form-control\" id=\"cpf\" placeholder=\"Digite o CPF\" formControlName=\"cpf\">\n    </div>\n  </div>\n\n  <div class=\"form-group\">\n    <div class=\"col-sm-offset-5 col-sm-10\">\n      <button type=\"submit\" class=\"btn btn-danger\" [disabled]=\"employeeForm.invalid\">\n        Cadastrar\n      </button>\n    </div>\n  </div>\n</form>\n"
+module.exports = "<h1 class=\"text-center action\">Cadastrar Funcionário</h1>\r\n\r\n<popup #popupNovoEmpregadoSucesso (confirmClick)=\"Confirm()\"  style=\"overflow:hidden\">\r\n     Funcionário Cadastrado com Sucesso!\r\n</popup>\r\n\r\n<form class=\"form-horizontal\" [formGroup]=\"employeeForm\" (submit)=\"onSubmit()\">\r\n  <div class=\"form-group\">\r\n    <label for=\"name\" class=\"col-sm-3 control-label\">Nome:</label>\r\n    <div class=\"col-sm-6\">\r\n      <input type=\"text\" class=\"form-control\" id=\"name\" placeholder=\"Digite o Nome\" formControlName=\"name\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"email\" class=\"col-sm-3 control-label\">Email:</label>\r\n    <div class=\"col-sm-6\">\r\n      <input type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Digite o email\"\r\n             formControlName=\"email\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"cpf\" class=\"col-sm-3 control-label\">CPF:</label>\r\n    <div class=\"col-sm-6\">\r\n      <input type=\"text\" class=\"form-control\" id=\"cpf\" placeholder=\"Digite o CPF\" formControlName=\"cpf\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <div class=\"col-sm-offset-5 col-sm-10\">\r\n      <button type=\"submit\" class=\"btn btn-danger\" [disabled]=\"employeeForm.invalid\">\r\n        Cadastrar\r\n      </button>\r\n    </div>\r\n  </div>\r\n</form>\r\n"
 
 /***/ }),
 
@@ -2060,7 +1991,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".action {\n    margin-top: 40px;\n}\n\n.image {\n    width: 200px;\n    margin-bottom: 10px;\n}\n\n.image-config {\n    margin-bottom: 40px;\n}", ""]);
+exports.push([module.i, ".action {\r\n    margin-top: 40px;\r\n}\r\n\r\n.image {\r\n    width: 200px;\r\n    margin-bottom: 10px;\r\n}\r\n\r\n.image-config {\r\n    margin-bottom: 40px;\r\n}", ""]);
 
 // exports
 
@@ -2073,7 +2004,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row action\">\n    <div class=\"col-sm-8 col-md-6 text-center\">\n        <div class=\"img-circle\">\n            <img src=\"assets/imagens/admin.png\" class=\"image\">\n            <div class=\"caption\">\n                <button type=\"button\" class=\"btn btn-success btn-lg\" [routerLink]=\"['/admin']\">Administração\n                    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n                </button>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-sm-8 col-md-6 text-center\">\n        <div class=\"img-circle\">\n            <img src=\"assets/imagens/config.png\" class=\"image image-config\">\n            <div class=\"caption\">\n                <button type=\"button\" class=\"btn btn-warning btn-lg\" [routerLink]=\"['/settings']\">Configurações\n                    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n                </button>\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"row\">\n    <div class=\"col-sm-8 col-md-12 text-center\">\n        <div class=\"img-circle\">\n            <img src=\"assets/imagens/cart.png\" class=\"image\">\n            <div class=\"caption\">\n                <button type=\"button\" class=\"btn btn-danger btn-lg\" [routerLink]=\"['/search-client']\">Iniciar Venda\n                    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n                </button>\n            </div>\n        </div>\n    </div>\n</div>\n"
+module.exports = "<div class=\"row action\">\r\n    <div class=\"col-sm-8 col-md-6 text-center\">\r\n        <div class=\"img-circle\">\r\n            <img src=\"assets/imagens/admin.png\" class=\"image\">\r\n            <div class=\"caption\">\r\n                <button type=\"button\" class=\"btn btn-success btn-lg\" [routerLink]=\"['/admin']\">Administração\r\n                    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n                </button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"col-sm-8 col-md-6 text-center\">\r\n        <div class=\"img-circle\">\r\n            <img src=\"assets/imagens/config.png\" class=\"image image-config\">\r\n            <div class=\"caption\">\r\n                <button type=\"button\" class=\"btn btn-warning btn-lg\" [routerLink]=\"['/settings']\">Configurações\r\n                    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n                </button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-sm-8 col-md-12 text-center\">\r\n        <div class=\"img-circle\">\r\n            <img src=\"assets/imagens/cart.png\" class=\"image\">\r\n            <div class=\"caption\">\r\n                <button type=\"button\" class=\"btn btn-danger btn-lg\" [routerLink]=\"['/search-client']\">Iniciar Venda\r\n                    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n                </button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -2121,7 +2052,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "\r\n.login2background{    \r\n    background-repeat:repeat;\r\n    background-attachment: fixed;\r\n    background-size: cover;\r\n}\r\n.loginbox{  \r\n    background: white;\r\n    color: black;    \r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    margin-right: -50%;\r\n    -webkit-transform: translate(-50%, -50%);\r\n            transform: translate(-50%, -50%); \r\n    padding: 20px;   \r\n    box-shadow: 0 8px 50px -2px #000;\r\n    border-radius:5px;\r\n\r\n}\r\n.logo{\r\n    width: 130px; \r\n    height: 55px;\r\n    margin-left: 10%;\r\n}\r\n@media (max-width:767px) {\r\n    .loginbox{ \r\n        margin-top: 5%;\r\n    }    \r\n}\r\n\r\n.loginbox_content{\r\n    padding:5% 11% 5% 11%;\r\n\r\n}\r\n\r\n.singtext{\r\n    font-family: \"Open Sans\",sans-serif;\r\n    font-size: 27px;  \r\n    color:  #42a5f5;\r\n    float: right;\r\n    padding-right: 25%;\r\n}\r\n\r\n.submit-btn{\r\n    float: right;\r\n    background-color: #42a5f5;\r\n    margin-right: 28%;\r\n    color: white;\r\n}\r\n\r\n.forgotpassword{\r\n    padding-left: 10%;\r\n}\r\n@media (max-width:800px) {\r\n    .submit-btn{\r\n        \r\n        margin-right: 23%;\r\n    }\r\n\r\n   \r\n}\r\n\r\n\r\n.background-image {\r\n    position: fixed;\r\n    left: 0;\r\n    right: 0;\r\n    z-index: 1;\r\n  \r\n    display: block;\r\n    background-image: url('http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_527bf56961712_1.JPG');\r\n    width: 1200px;\r\n    height: 800px;\r\n  \r\n    -webkit-filter: blur(5px);\r\n    -moz-filter: blur(5px);\r\n    -o-filter: blur(5px);\r\n    -ms-filter: blur(5px);\r\n    filter: blur(5px);\r\n  }\r\n  \r\n  ", ""]);
 
 // exports
 
@@ -2134,7 +2065,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1 class=\"text-center action\">Login</h1>\n\n<form class=\"form-horizontal\" [formGroup]=\"loginForm\" (submit)=\"onSubmit()\">\n    <div class=\"form-group\">\n        <label for=\"name\" class=\"col-sm-3 control-label\">Login:</label>\n        <div class=\"col-sm-6\">\n            <input type=\"text\" class=\"form-control\" id=\"login\" placeholder=\"Digite o Login\" formControlName=\"login\">\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"email\" class=\"col-sm-3 control-label\">Senha:</label>\n        <div class=\"col-sm-6\">\n            <input type=\"email\" class=\"form-control\" id=\"senha\" placeholder=\"Digite a Senha\"\n                   formControlName=\"senha\">\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n      <div class=\"text-center\">\n        <button type=\"submit\" class=\"btn btn-danger\" [disabled]=\"loginForm.invalid\">\n          Fazer Login\n        </button>\n        <button type=\"submit\" class=\"btn btn-danger\">\n            Novo Usuário\n        </button>\n      </div>\n    </div>\n</form>\n"
+module.exports = "<link href=\"//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css\" rel=\"stylesheet\" id=\"bootstrap-css\">\r\n<script src=\"//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js\"></script>\r\n<script src=\"//code.jquery.com/jquery-1.11.1.min.js\"></script>\r\n\r\n<body class=\"login2background\">\r\n\r\n        <form #f=\"ngForm\" (submit)=\"form_login(f)\" >\r\n            <div class=\"container\">  \r\n            <div class=\"col-lg-6 col-md-6 col-sm-8  loginbox\">\r\n                <div class=\" row\">\r\n                    <div class=\"col-lg-8 col-md-8 col-sm-8 col-xs-6\">\r\n                        <img src=\"http://lojapdvautomacao.com.br/wp-content/uploads/2018/02/LOGO.png\" alt=\"Logo\" class=\"logo\"> \r\n                    </div>\r\n                    <div class=\"col-lg-4 col-md-4 col-sm-4 col-xs-6  \">\r\n                        <span class=\"singtext\" color=\"blue\" > Login </span>   \r\n                    </div>\r\n                                 \r\n                </div>\r\n                <div class=\" row loginbox_content \">                        \r\n                    <div class=\"input-group input-group-sm\" >\r\n                        <span class=\"input-group-addon\">\r\n                            <span class=\"glyphicon glyphicon-user\"></span>\r\n                        </span>\r\n                        <input type=\"text\" class=\"form-control\" id=\"login\"  required ngModel name=\"email\" placeholder=\"Digite o email\">\r\n                    </div>\r\n                    <br>\r\n                    <div class=\"input-group input-group-sm\">\r\n                        <span class=\"input-group-addon\">\r\n                            <span class=\"glyphicon glyphicon-lock\"></span>\r\n                        </span>\r\n                        <input type=\"password\" class=\"form-control\" required ngModel name=\"password\" id=\"password\" placeholder=\"Digite sua senha\" >\r\n     \r\n                    </div>              \r\n                </div>\r\n                <div class=\"row \">                   \r\n                    <div class=\"col-lg-8 col-md-8  col-sm-8 col-xs-7 forgotpassword \"> \r\n                        <a [routerLink]=\"['/register']\"  > Cadastrar-se </a>                        \r\n                    </div>\r\n                    <div class=\"col-lg-4 col-md-4 col-sm-4  col-xs-5 \">          \r\n                            <button type=\"submit\" class=\"btn submit-btn\" >\r\n                                    Entrar\r\n                            </button>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-4 \"></div>\r\n\r\n         </div>        \r\n    </form>\r\n\r\n\r\n</body>"
 
 /***/ }),
 
@@ -2144,9 +2075,8 @@ module.exports = "<h1 class=\"text-center action\">Login</h1>\n\n<form class=\"f
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_login_service__ = __webpack_require__("../../../../../src/app/services/login.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_auth__ = __webpack_require__("../../../../angularfire2/auth/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2159,27 +2089,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var LoginComponent = (function () {
-    function LoginComponent(fb, loginService, router, activatedRoute) {
-        this.fb = fb;
-        this.loginService = loginService;
+    function LoginComponent(afAuth, router) {
+        this.afAuth = afAuth;
         this.router = router;
-        this.activatedRoute = activatedRoute;
-        this.loginForm = fb.group({
-            'login': ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required],
-            'senha': ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* Validators */].required]
-        });
     }
-    // autentica o usuario
-    LoginComponent.prototype.onSubmit = function () {
-        //this.loginService.doLogin(this.loginForm.value);
-        if (this.path) {
-            this.router.navigate(['/cart']);
+    LoginComponent.prototype.form_login = function (f) {
+        var _this = this;
+        if (!f.valid) {
+            return;
         }
-        else {
-            this.router.navigate(['/home']);
-        }
+        this.afAuth.auth.signInWithEmailAndPassword(f.controls.email.value, f.controls.password.value).then(function (ok) {
+            _this.router.navigate(["/home"]);
+        }).catch(function (error) {
+            alert(error.message);
+        });
     };
     LoginComponent.prototype.ngOnInit = function () {
     };
@@ -2189,12 +2113,13 @@ LoginComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: '[app-login]',
         template: __webpack_require__("../../../../../src/app/components/login/login.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/login/login.component.css")]
+        styles: [__webpack_require__("../../../../../src/app/components/login/login.component.css")],
+        providers: [__WEBPACK_IMPORTED_MODULE_1_angularfire2_auth__["a" /* AngularFireAuth */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_login_service__["a" /* LoginService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_login_service__["a" /* LoginService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2_auth__["a" /* AngularFireAuth */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angularfire2_auth__["a" /* AngularFireAuth */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
 ], LoginComponent);
 
-var _a, _b, _c, _d;
+var _a, _b;
 //# sourceMappingURL=login.component.js.map
 
 /***/ }),
@@ -2207,7 +2132,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "color{\r\n    background-color: aqua;\r\n}", ""]);
 
 // exports
 
@@ -2220,7 +2145,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-default\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-header\">\n            <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\"\n                    data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\n                <span class=\"sr-only\">Toggle navigation</span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n            </button>\n            <a class=\"navbar-brand\" [routerLink]=\"['/']\">\n                <img alt=\"Brand\" src=\"assets/imagens/logo-bematech-totvs.png\" width=\"110\">\n            </a>\n        </div>\n\n        <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li class=\"dropdown\">\n                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\"\n                       aria-expanded=\"false\">Usuario<span class=\"caret\"></span></a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a>Minha Conta</a></li>\n                        <li><a>Meus Pedidos</a></li>\n                        <li role=\"separator\" class=\"divider\"></li>\n                        <li><a>Sair</a></li>\n                    </ul>\n                </li>\n            </ul>\n        </div>\n    </div>\n</nav>\n\n"
+module.exports = "<nav class=\"navbar navbar-default color\">\r\n    <div class=\"container-fluid\">\r\n        <div class=\"navbar-header\">\r\n            <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\"\r\n                    data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n                <span class=\"sr-only\">Toggle navigation</span>\r\n                <span class=\"icon-bar\"></span>\r\n                <span class=\"icon-bar\"></span>\r\n                <span class=\"icon-bar\"></span>\r\n            </button>\r\n         </div>\r\n\r\n        <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n            <ul class=\"nav navbar-nav navbar-right\">\r\n                <li class=\"dropdown\">\r\n                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\"\r\n                       aria-expanded=\"false\">Usuario<span class=\"caret\"></span></a>\r\n                    <ul class=\"dropdown-menu\">\r\n                        <li><a>Minha Conta</a></li>\r\n                        <li role=\"separator\" class=\"divider\"></li>\r\n                        <li><a>Sair</a></li>\r\n                    </ul>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</nav>\r\n\r\n"
 
 /***/ }),
 
@@ -2281,7 +2206,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/product/edit-item/edit-item-product.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1 class=\"text-center action\">Editar Produto</h1>\n\n<form class=\"form-horizontal\" [formGroup]=\"productForm\" (submit)=\"onSubmit()\">\n  <div class=\"form-group\">\n    <label for=\"name\" class=\"col-sm-3 control-label\">Nome:</label>\n    <div class=\"col-sm-6\">\n      <input type=\"text\" class=\"form-control\" id=\"name\" placeholder=\"Digite o Nome\" formControlName=\"name\">\n    </div>\n  </div>\n\n  <div class=\"form-group\">\n    <label for=\"image\" class=\"col-sm-3 control-label\">Imagem:</label>\n    <div class=\"col-sm-6\">\n      <input type=\"text\" class=\"form-control\" id=\"image\"\n             formControlName=\"image\">\n    </div>\n  </div>\n\n  <div class=\"form-group\">\n    <label for=\"description\" class=\"col-sm-3 control-label\">Descrição:</label>\n    <div class=\"col-sm-6\">\n            <textarea rows=\"4\" cols=\"50\" class=\"form-control\" id=\"description\" placeholder=\"Digite a descrição\"\n                      formControlName=\"description\"> </textarea>\n    </div>\n  </div>\n\n  <div class=\"form-group\">\n    <label for=\"price\" class=\"col-sm-3 control-label\">Preço:</label>\n    <div class=\"col-sm-6\">\n      <input type=\"number\" class=\"form-control\" id=\"price\" placeholder=\"Digite o preço\"\n             formControlName=\"price\">\n    </div>\n  </div>\n\n  <div class=\"form-group\">\n    <div class=\"text-center\">\n      <button type=\"submit\" class=\"btn btn-danger\" [disabled]=\"productForm.invalid\">\n        Atualizar\n      </button>\n    </div>\n  </div>\n</form>"
+module.exports = "<h1 class=\"text-center action\">Editar Produto</h1>\r\n\r\n<form class=\"form-horizontal\" [formGroup]=\"productForm\" (submit)=\"onSubmit()\">\r\n  <div class=\"form-group\">\r\n    <label for=\"name\" class=\"col-sm-3 control-label\">Nome:</label>\r\n    <div class=\"col-sm-6\">\r\n      <input type=\"text\" class=\"form-control\" id=\"name\" placeholder=\"Digite o Nome\" formControlName=\"name\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"image\" class=\"col-sm-3 control-label\">Imagem:</label>\r\n    <div class=\"col-sm-6\">\r\n      <input type=\"text\" class=\"form-control\" id=\"image\"\r\n             formControlName=\"image\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"description\" class=\"col-sm-3 control-label\">Descrição:</label>\r\n    <div class=\"col-sm-6\">\r\n            <textarea rows=\"4\" cols=\"50\" class=\"form-control\" id=\"description\" placeholder=\"Digite a descrição\"\r\n                      formControlName=\"description\"> </textarea>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"price\" class=\"col-sm-3 control-label\">Preço:</label>\r\n    <div class=\"col-sm-6\">\r\n      <input type=\"number\" class=\"form-control\" id=\"price\" placeholder=\"Digite o preço\"\r\n             formControlName=\"price\">\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <div class=\"text-center\">\r\n      <button type=\"submit\" class=\"btn btn-danger\" [disabled]=\"productForm.invalid\">\r\n        Atualizar\r\n      </button>\r\n    </div>\r\n  </div>\r\n</form>"
 
 /***/ }),
 
@@ -2370,7 +2295,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/product/item/item-product.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<td>{{product.id}}</td>\n<td>{{product.name}}</td>\n<td><img src={{product.image}} width=\"40px\"></td>\n<td>{{product.description}}</td>\n<td>{{product.price}}</td>\n<td>\n    <button type=\"button\" class=\"btn btn-success\" [routerLink]=\"['/edit-product', product.id]\">\n        <span class=\"glyphicon glyphicon-pencil\"></span>\n    </button>\n    <button type=\"button\" class=\"btn btn-danger\" (click)=\"removeProduct()\">\n        <span class=\"glyphicon glyphicon-trash\"></span>\n    </button>\n</td>"
+module.exports = "<td>{{product.id}}</td>\r\n<td>{{product.name}}</td>\r\n<td>{{product.description}}</td>\r\n<td>R$ {{product.price}}</td>\r\n<td>\r\n    <button type=\"button\" class=\"btn btn-success\" [routerLink]=\"['/edit-product', product.id]\">\r\n        <span class=\"glyphicon glyphicon-pencil\"></span>\r\n    </button>\r\n    <button type=\"button\" class=\"btn btn-danger\" (click)=\"removeProduct()\">\r\n        <span class=\"glyphicon glyphicon-trash\"></span>\r\n    </button>\r\n</td>"
 
 /***/ }),
 
@@ -2437,7 +2362,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".btn-circle {\n    border-radius: 50%;\n}", ""]);
+exports.push([module.i, ".btn-circle {\r\n    border-radius: 50%;\r\n}", ""]);
 
 // exports
 
@@ -2450,7 +2375,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/product/list-items/list-items-product.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel panel-primary\">\n    <div class=\"panel-heading text-center\">Produtos\n        <button type=\"button\" class=\"btn btn-warning btn-circle\" [routerLink]=\"['/new-product']\">\n            <span class=\"glyphicon glyphicon-plus\"></span>\n        </button>\n    </div>\n    <table class=\"table\">\n        <thead>\n        <tr>\n            <th>ID</th>\n            <th>Nome</th>\n            <th>Imagem</th>\n            <th>Descrição</th>\n            <th>Preço</th>\n            <th>Ações</th>\n        </tr>\n        </thead>\n        <tbody>\n        <tr app-item-product *ngFor=\"let product of products;\" [product]=\"product\"\n            (removeProductEvent)=\"onRemoveProduct()\"></tr>\n        </tbody>\n    </table>\n</div>\n"
+module.exports = "<div class=\"panel panel-primary\">\r\n    <div class=\"panel-heading text-center\">Produtos\r\n        <button type=\"button\" class=\"btn btn-warning btn-circle\" [routerLink]=\"['/new-product']\">\r\n            <span class=\"glyphicon glyphicon-plus\"></span>\r\n        </button>\r\n    </div>\r\n    <table class=\"table\">\r\n        <thead>\r\n        <tr>\r\n            <th>ID</th>\r\n            <th>Nome</th>\r\n            <th>Descrição</th>\r\n            <th>Preço</th>\r\n            <th>Ações</th>\r\n        </tr>\r\n        </thead>\r\n        <tbody>\r\n        <tr app-item-product *ngFor=\"let product of products;\" [product]=\"product\"\r\n            (removeProductEvent)=\"onRemoveProduct()\"></tr>\r\n        </tbody>\r\n    </table>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -2520,7 +2445,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/product/new-product/new-product.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1 class=\"text-center action\">Cadastrar Produto</h1>\n\n<form class=\"form-horizontal\" [formGroup]=\"productForm\" (submit)=\"onSubmit()\">\n    <div class=\"form-group\">\n        <label for=\"name\" class=\"col-sm-3 control-label\">Nome:</label>\n        <div class=\"col-sm-6\">\n            <input type=\"text\" class=\"form-control\" id=\"name\" placeholder=\"Digite o Nome\" formControlName=\"name\">\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"image\" class=\"col-sm-3 control-label\">Imagem:</label>\n        <div class=\"col-sm-6\">\n            <input type=\"text\" class=\"form-control\" id=\"image\"\n                   formControlName=\"image\">\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"description\" class=\"col-sm-3 control-label\">Descrição:</label>\n        <div class=\"col-sm-6\">\n            <textarea rows=\"4\" cols=\"50\" class=\"form-control\" id=\"description\" placeholder=\"Digite a descrição\"\n                      formControlName=\"description\"> </textarea>\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <label for=\"price\" class=\"col-sm-3 control-label\">Preço:</label>\n        <div class=\"col-sm-6\">\n            <input type=\"number\" class=\"form-control\" id=\"price\" placeholder=\"Digite o preço\"\n                   formControlName=\"price\">\n        </div>\n    </div>\n\n    <div class=\"form-group\">\n        <div class=\"text-center\">\n            <button type=\"submit\" class=\"btn btn-danger\" [disabled]=\"productForm.invalid\">\n                Cadastrar\n            </button>\n        </div>\n    </div>\n</form>"
+module.exports = "<h1 class=\"text-center action\">Cadastrar Produto</h1>\r\n\r\n<form class=\"form-horizontal\" [formGroup]=\"productForm\" (submit)=\"onSubmit()\">\r\n    <div class=\"form-group\">\r\n        <label for=\"name\" class=\"col-sm-3 control-label\">Nome:</label>\r\n        <div class=\"col-sm-6\">\r\n            <input type=\"text\" class=\"form-control\" id=\"name\" placeholder=\"Digite o Nome\" formControlName=\"name\">\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label for=\"image\" class=\"col-sm-3 control-label\">Imagem:</label>\r\n        <div class=\"col-sm-6\">\r\n            <input type=\"text\" class=\"form-control\" id=\"image\"\r\n                   formControlName=\"image\">\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label for=\"description\" class=\"col-sm-3 control-label\">Descrição:</label>\r\n        <div class=\"col-sm-6\">\r\n            <textarea rows=\"4\" cols=\"50\" class=\"form-control\" id=\"description\" placeholder=\"Digite a descrição\"\r\n                      formControlName=\"description\"> </textarea>\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <label for=\"price\" class=\"col-sm-3 control-label\">Preço:</label>\r\n        <div class=\"col-sm-6\">\r\n            <input type=\"number\" class=\"form-control\" id=\"price\" placeholder=\"Digite o preço\"\r\n                   formControlName=\"price\">\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n        <div class=\"text-center\">\r\n            <button type=\"submit\" class=\"btn btn-danger\" [disabled]=\"productForm.invalid\">\r\n                Cadastrar\r\n            </button>\r\n        </div>\r\n    </div>\r\n</form>"
 
 /***/ }),
 
@@ -2582,7 +2507,7 @@ var _a, _b, _c;
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/settings/settings.component.css":
+/***/ "../../../../../src/app/components/register/register.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -2590,7 +2515,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "\r\n.login2background{    \r\n    background-repeat:repeat;\r\n    background-attachment: fixed;\r\n    background-size: cover;\r\n}\r\n.loginbox{  \r\n    background: white;\r\n    color: black;    \r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    margin-right: -50%;\r\n    -webkit-transform: translate(-50%, -50%);\r\n            transform: translate(-50%, -50%); \r\n    padding: 20px;   \r\n    box-shadow: 0 8px 50px -2px #000;\r\n    border-radius:5px;\r\n\r\n}\r\n.logo{\r\n    width: 130px; \r\n    height: 55px;\r\n    margin-left: 10%;\r\n}\r\n@media (max-width:767px) {\r\n    .loginbox{ \r\n        margin-top: 5%;\r\n    }    \r\n}\r\n\r\n.loginbox_content{\r\n    padding:5% 11% 5% 11%;\r\n\r\n}\r\n\r\n.singtext{\r\n    font-family: \"Open Sans\",sans-serif;\r\n    font-size: 27px;  \r\n    color:  #42a5f5;\r\n    float: right;\r\n    padding-right: 25%;\r\n}\r\n\r\n.submit-btn{\r\n    float: right;\r\n    background-color: #42a5f5;\r\n    margin-right: 28%;\r\n    color: white;\r\n}\r\n\r\n.forgotpassword{\r\n    padding-left: 10%;\r\n}\r\n@media (max-width:800px) {\r\n    .submit-btn{\r\n        \r\n        margin-right: 23%;\r\n    }\r\n\r\n   \r\n}\r\n\r\n\r\n.background-image {\r\n    position: fixed;\r\n    left: 0;\r\n    right: 0;\r\n    z-index: 1;\r\n  \r\n    display: block;\r\n    background-image: url('http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_527bf56961712_1.JPG');\r\n    width: 1200px;\r\n    height: 800px;\r\n  \r\n    -webkit-filter: blur(5px);\r\n    -moz-filter: blur(5px);\r\n    -o-filter: blur(5px);\r\n    -ms-filter: blur(5px);\r\n    filter: blur(5px);\r\n  }\r\n  \r\n  ", ""]);
 
 // exports
 
@@ -2600,24 +2525,19 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/settings/settings.component.html":
+/***/ "../../../../../src/app/components/register/register.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel panel-info\">\n  <div class=\"panel-primary\">\n      <div class=\"panel-heading text-center col-lg-6\">IP Servidor: {{setting.slice().pop().ip}}</div>\n      <div class=\"panel-heading text-center col-lg-6\">Porta: {{setting.slice().pop().port}}</div>\n  </div>\n  <div class=\"panel-heading text-center\">Dispositivos</div>\n  <div class=\"panel-collapse\">\n      <table class=\"table\">\n          <thead>\n              <tr>\n                  <th>Id</th>\n                  <th>IP</th>\n                  <th>Porta</th>\n                  <th>Nome</th>\n                  <th>MAC</th>\n              </tr>\n          </thead>\n          <tbody>\n            <tr app-device *ngFor=\"let device of devices;\" [device]=\"device\" (click)=\"selectDevice(device)\" style=\"cursor:pointer\">                    \n                </tr>\n          </tbody>\n      </table>\n  </div>\n</div>"
+module.exports = "<link href=\"//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css\" rel=\"stylesheet\" id=\"bootstrap-css\">\n<script src=\"//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js\"></script>\n<script src=\"//code.jquery.com/jquery-1.11.1.min.js\"></script>\n\n<body class=\"login2background\">\n\n    <form class=\"form-horizontal\" [formGroup]=\"loginForm\" (submit)=\"onSubmit()\">\n\n\n\n\n        <div class=\"container\">  \n            <div class=\"col-lg-6 col-md-6 col-sm-8  loginbox\">\n                <div class=\" row\">\n                    <div class=\"col-lg-8 col-md-8 col-sm-8 col-xs-6\">\n                        <img src=\"http://lojapdvautomacao.com.br/wp-content/uploads/2018/02/LOGO.png\" alt=\"Logo\" class=\"logo\"> \n                    </div>\n                    <div class=\"col-lg-4 col-md-4 col-sm-4 col-xs-6  \">\n                        <span class=\"singtext\" color=\"blue\" > Cadastro </span>   \n                    </div>\n                                 \n                </div>\n                <div class=\" row loginbox_content \">                        \n                    <div class=\"input-group input-group-sm\" >\n                        <span class=\"input-group-addon\">\n                            <span class=\"glyphicon glyphicon-user\"></span>\n                        </span>\n                        <input type=\"text\" class=\"form-control\" id=\"login\" placeholder=\"Digite email\" formControlName=\"login\">\n                    </div>\n                    <br>\n                    <div class=\"input-group input-group-sm\">\n                        <span class=\"input-group-addon\">\n                            <span class=\"glyphicon glyphicon-lock\"></span>\n                        </span>\n                        <input type=\"email\" class=\"form-control\" id=\"senha\" placeholder=\"Digite sua senha\"     formControlName=\"senha\">\n     \n                    </div>     \n                    <br>\n                    <div class=\"input-group input-group-sm\">\n                            <span class=\"input-group-addon\">\n                                <span class=\"glyphicon glyphicon-lock\"></span>\n                            </span>\n                            <input type=\"email\" class=\"form-control\" id=\"senha\" placeholder=\"Digite sua senha novamente\"     formControlName=\"senha\">\n         \n                    </div>    \n                    <br>\n                    <div class=\"input-group input-group-sm\">\n                            <span class=\"input-group-addon\">\n                                <span class=\"glyphicon glyphicon-user\"></span>\n                            </span>\n                            <input type=\"email\" class=\"form-control\" id=\"senha\" placeholder=\"Digite seu CPF\"     formControlName=\"senha\">\n                            \n                    </div>  \n                    <br> \n                    <div class=\"input-group input-group-sm\">\n                            <span class=\"input-group-addon\">\n                                <span class=\"glyphicon glyphicon-user\"></span>\n                            </span>\n                            <input type=\"email\" class=\"form-control\" id=\"rg\" placeholder=\"Digite seu RG\"     formControlName=\"rg\">\n                            \n                    </div>  \n                    <br>\n                    \n                  \n                      <!-- Select Basic -->\n                    <div class=\"form-group\">\n                          <label class=\"col-md-4 control-label\" for=\"idAdmin\">Nível</label>\n                          <div class=\"col-md-5\">\n                          <select id=\"typeUser\" name=\"typeUser\" class=\"form-control\">\n                          <option value=\"1\">Gerente</option>\n                          <option value=\"2\">Funcionário</option>\n                          </select>\n                        </div>\n                     </div>\n                \n                \n                \n                </div>\n                <div class=\"row \">                   \n                    <div class=\"col-lg-8 col-md-8  col-sm-8 col-xs-7 forgotpassword \"> \n                            <a [routerLink]=\"['/']\"  > Cancelar </a>                        \n\n                    </div>\n                    <div class=\"col-lg-4 col-md-4 col-sm-4  col-xs-5 \">          \n                            <button type=\"submit\" class=\"btn submit-btn\"  [disabled]=\"loginForm.invalid\">\n                                    Cadastrar\n                            </button>\n                          \n                    </div>\n                </div>\n            </div>\n            <div class=\"col-lg-6 col-md-6 col-sm-4 \"></div>\n\n            </div>        \n    </form>\n    </body>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/settings/settings.component.ts":
+/***/ "../../../../../src/app/components/register/register.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_settings_service__ = __webpack_require__("../../../../../src/app/services/settings.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_communication_service__ = __webpack_require__("../../../../../src/app/services/communication.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_devices_service__ = __webpack_require__("../../../../../src/app/services/devices.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_device__ = __webpack_require__("../../../../../src/app/models/device.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2628,78 +2548,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
-
-
-
-
-var SettingsComponent = (function () {
-    function SettingsComponent(communicationService, router, settingsService, devicesServices) {
-        this.communicationService = communicationService;
-        this.router = router;
-        this.settingsService = settingsService;
-        this.devicesServices = devicesServices;
-        this.devices = new Array();
-        this.communicationService = communicationService;
-        this.settingsService = settingsService;
-        this.devicesServices = devicesServices;
+var RegisterComponent = (function () {
+    function RegisterComponent() {
     }
-    SettingsComponent.prototype.addSetting = function () {
-        this.setting = this.settingsService.getSetting();
-        this.settingsService.addSetting(this.setting);
+    RegisterComponent.prototype.ngOnInit = function () {
     };
-    SettingsComponent.prototype.removeSetting = function () {
-        this.setting = this.settingsService.getSetting();
-    };
-    SettingsComponent.prototype.selectDevice = function (device) {
-        this.device = this.devicesServices.storeDevice(device);
-        if (this.device != undefined) {
-            alert("Dispositivo " + this.device.name + " selecionado!");
-        }
-        else {
-            alert("Não foi possível selecionar o dispositivo!");
-        }
-        this.router.navigate(['home']);
-        return this.device;
-    };
-    SettingsComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.setting = this.settingsService.getSetting();
-        console.log(this.setting.length);
-        //this.devicesServices.descobertaDispositivo().subscribe(response => {
-        this.communicationService.descobertaDispositivo().subscribe(function (response) {
-            _this.devices = response ? response.json().devices.map(function (device) {
-                return new __WEBPACK_IMPORTED_MODULE_4__models_device__["a" /* Device */](device.id, device.ip, '8080', device.nome, device.mac);
-            }) : [];
-            console.log(_this.devices);
-        }, function (erro) { return console.log(erro); });
-    };
-    return SettingsComponent;
+    return RegisterComponent;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
-    __metadata("design:type", Array)
-], SettingsComponent.prototype, "setting", void 0);
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
-    __metadata("design:type", Object)
-], SettingsComponent.prototype, "devices", void 0);
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__models_device__["a" /* Device */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__models_device__["a" /* Device */]) === "function" && _a || Object)
-], SettingsComponent.prototype, "device", void 0);
-SettingsComponent = __decorate([
+RegisterComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-settings',
-        template: __webpack_require__("../../../../../src/app/components/settings/settings.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/settings/settings.component.css")],
-        providers: [__WEBPACK_IMPORTED_MODULE_3__services_devices_service__["a" /* DevicesService */], __WEBPACK_IMPORTED_MODULE_1__services_settings_service__["a" /* SettingsService */], __WEBPACK_IMPORTED_MODULE_2__services_communication_service__["a" /* CommunicationService */]]
+        selector: 'app-register',
+        template: __webpack_require__("../../../../../src/app/components/register/register.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/register/register.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_communication_service__["a" /* CommunicationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_communication_service__["a" /* CommunicationService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_router__["b" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__services_settings_service__["a" /* SettingsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_settings_service__["a" /* SettingsService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__services_devices_service__["a" /* DevicesService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_devices_service__["a" /* DevicesService */]) === "function" && _e || Object])
-], SettingsComponent);
+    __metadata("design:paramtypes", [])
+], RegisterComponent);
 
-var _a, _b, _c, _d, _e;
-//# sourceMappingURL=settings.component.js.map
+//# sourceMappingURL=register.component.js.map
 
 /***/ }),
 
@@ -2725,7 +2590,7 @@ var cart = new __WEBPACK_IMPORTED_MODULE_0__models_cart__["a" /* Cart */]([], 0)
 
 // clientes de teste
 var clients = [
-    new __WEBPACK_IMPORTED_MODULE_0__models_client__["a" /* Client */](1, 'José João', 'aaa@gmail.com', '99999999999')
+    new __WEBPACK_IMPORTED_MODULE_0__models_client__["a" /* Client */](1, 'José João', 'aaa@gmail.com', '99999999999', 'Rua 1, numero 10, bairro: 010')
 ];
 //# sourceMappingURL=clients.data.js.map
 
@@ -2817,11 +2682,12 @@ var Cart = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Client; });
 var Client = (function () {
-    function Client(id, name, email, cpf) {
+    function Client(id, name, telefone, cpf, address) {
         this.id = id;
         this.name = name;
-        this.email = email;
+        this.telefone = telefone;
         this.cpf = cpf;
+        this.address = address;
     }
     return Client;
 }());
@@ -2910,7 +2776,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/multipopup/multipopup.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<popup #popup1>\n  Add your custom html elements here\n  <br>\n</popup>\n\n<popup #popup2>\n  Add your custom html elements here\n  <br>\n</popup>\n\n<popup #popup3>\n  <p>You can change your animations by setting this.popup.option</p>\n\n  <div>\n    'fadeInLeft'\n    'fadeInRight',\n    'fadeInUp',\n    'bounceIn',\n    'bounceInDown'\n  </div>\n  <br>\n</popup>\n\n<popup #popup4 (confirmClick)=\"YourConfirmEvent()\">\n  You can subscribe to the confirm and cancel button event, or you can hide the buttons and add your own.\n  <br>\n  <br>\n  <p>(confirmClick)=\"YourConfirmEvent()\" </p>\n  <p>(cancelClick)=\"YourCancelEvent()\" </p>\n\n  <br>\n</popup>\n\n<popup #popup5 (confirmClick)=\"login()\">\n\n  <form class=\"form-horizontal\">\n    <div class=\"form-group\">\n      <label for=\"inputEmai3\" class=\"col-sm-3 control-label\">Email</label>\n      <div class=\"col-sm-7\">\n        <input type=\"text\" class=\"form-control\" name=\"email\" [(ngModel)]=\"email\" id=\"email\" placeholder=\"email\">\n      </div>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"inputEmai3\" class=\"col-sm-3 control-label\">Password</label>\n      <div class=\"col-sm-7\">\n        <input type=\"password\" class=\"form-control\" name=\"password\" [(ngModel)]=\"password\" id=\"password\" placeholder=\"password\">\n      </div>\n    </div>\n    <div class=\"form-group\">\n      <div class=\"form-group text-right\">\n        <div class=\"col-sm-offset-3 col-sm-7\">\n          <div class=\"checkbox\">\n            <label>\n              <input type=\"checkbox\" id=\"RequireLogin\" name=\"RequireLogin\"> Remember Me\n            </label>\n          </div>\n        </div>\n      </div>\n    </div>\n\n  </form>\n\n</popup>\n<br><br>\n<div class=\"text-center\">\n  <p style=\"font-size: 28px;font-weight: bold;color:#4180ab;\">ng2-opd-popup</p>\n  <p style=\"margin-top: -12px;color:#333\">Popup component for Angular 2 with support for aot</p>\n  <br>\n  <div class=\"row\">\n    <span style=\"color: #888;font-size: 12px;\">Test the Popups here...</span><br>\n    <button class=\"btn btn-mbe-normal sp\" (click)=\"showPopup1()\">Simple popup</button>\n    <button class=\"btn btn-mbe-normal sp\" (click)=\"showPopup2()\">Size & Color</button>\n    <button class=\"btn btn-mbe-normal sp\" (click)=\"showPopup3()\">Animations</button>\n    <button class=\"btn btn-mbe-normal sp\" (click)=\"showPopup4()\">Events</button>\n    <button class=\"btn btn-mbe-normal sp\" (click)=\"showPopup5()\">Forms sample</button>\n  </div>\n  <br><br><br>\n\n  <p>You can get the component and instructions <a href=\"https://www.npmjs.com/package/ng2-opd-popup\" target=\"_blank\" style=\"color: #4180ab;font-weight: bold;\">HERE</a> </p>\n\n  <br>\n  <br>\n  <div class=\"wrapper\">\n    <ul class=\"social-icons icon-flat list-unstyled list-inline\">\n      <li> <a href=\"https://www.facebook.com/opdahlmann\" target=\"_blank\"><i class=\"fa fa-facebook\"></i></a></li>\n      <li> <a href=\"https://github.com/opdahlmann\" target=\"_blank\"><i class=\"fa fa-github\"></i></a></li>\n      <li> <a href=\"https://twitter.com/opdahlmann\" target=\"_blank\"><i class=\"fa fa-twitter\"></i></a></li>\n      <li> <a href=\"https://www.youtube.com/channel/UC_50wEWI-0xFLfAcbuA7Dzw\" target=\"_blank\"><i class=\"fa fa-youtube\"></i></a></li>\n    </ul>\n  </div>\n</div>\n\n<script>\n  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');\n  ga('create', 'UA-90231581-1', 'auto');\n  ga('send', 'pageview');\n</script>\n"
+module.exports = "<popup #popup1>\r\n  Add your custom html elements here\r\n  <br>\r\n</popup>\r\n\r\n<popup #popup2>\r\n  Add your custom html elements here\r\n  <br>\r\n</popup>\r\n\r\n<popup #popup3>\r\n  <p>You can change your animations by setting this.popup.option</p>\r\n\r\n  <div>\r\n    'fadeInLeft'\r\n    'fadeInRight',\r\n    'fadeInUp',\r\n    'bounceIn',\r\n    'bounceInDown'\r\n  </div>\r\n  <br>\r\n</popup>\r\n\r\n<popup #popup4 (confirmClick)=\"YourConfirmEvent()\">\r\n  You can subscribe to the confirm and cancel button event, or you can hide the buttons and add your own.\r\n  <br>\r\n  <br>\r\n  <p>(confirmClick)=\"YourConfirmEvent()\" </p>\r\n  <p>(cancelClick)=\"YourCancelEvent()\" </p>\r\n\r\n  <br>\r\n</popup>\r\n\r\n<popup #popup5 (confirmClick)=\"login()\">\r\n\r\n  <form class=\"form-horizontal\">\r\n    <div class=\"form-group\">\r\n      <label for=\"inputEmai3\" class=\"col-sm-3 control-label\">Email</label>\r\n      <div class=\"col-sm-7\">\r\n        <input type=\"text\" class=\"form-control\" name=\"email\" [(ngModel)]=\"email\" id=\"email\" placeholder=\"email\">\r\n      </div>\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label for=\"inputEmai3\" class=\"col-sm-3 control-label\">Password</label>\r\n      <div class=\"col-sm-7\">\r\n        <input type=\"password\" class=\"form-control\" name=\"password\" [(ngModel)]=\"password\" id=\"password\" placeholder=\"password\">\r\n      </div>\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <div class=\"form-group text-right\">\r\n        <div class=\"col-sm-offset-3 col-sm-7\">\r\n          <div class=\"checkbox\">\r\n            <label>\r\n              <input type=\"checkbox\" id=\"RequireLogin\" name=\"RequireLogin\"> Remember Me\r\n            </label>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n  </form>\r\n\r\n</popup>\r\n<br><br>\r\n<div class=\"text-center\">\r\n  <p style=\"font-size: 28px;font-weight: bold;color:#4180ab;\">ng2-opd-popup</p>\r\n  <p style=\"margin-top: -12px;color:#333\">Popup component for Angular 2 with support for aot</p>\r\n  <br>\r\n  <div class=\"row\">\r\n    <span style=\"color: #888;font-size: 12px;\">Test the Popups here...</span><br>\r\n    <button class=\"btn btn-mbe-normal sp\" (click)=\"showPopup1()\">Simple popup</button>\r\n    <button class=\"btn btn-mbe-normal sp\" (click)=\"showPopup2()\">Size & Color</button>\r\n    <button class=\"btn btn-mbe-normal sp\" (click)=\"showPopup3()\">Animations</button>\r\n    <button class=\"btn btn-mbe-normal sp\" (click)=\"showPopup4()\">Events</button>\r\n    <button class=\"btn btn-mbe-normal sp\" (click)=\"showPopup5()\">Forms sample</button>\r\n  </div>\r\n  <br><br><br>\r\n\r\n  <p>You can get the component and instructions <a href=\"https://www.npmjs.com/package/ng2-opd-popup\" target=\"_blank\" style=\"color: #4180ab;font-weight: bold;\">HERE</a> </p>\r\n\r\n  <br>\r\n  <br>\r\n  <div class=\"wrapper\">\r\n    <ul class=\"social-icons icon-flat list-unstyled list-inline\">\r\n      <li> <a href=\"https://www.facebook.com/opdahlmann\" target=\"_blank\"><i class=\"fa fa-facebook\"></i></a></li>\r\n      <li> <a href=\"https://github.com/opdahlmann\" target=\"_blank\"><i class=\"fa fa-github\"></i></a></li>\r\n      <li> <a href=\"https://twitter.com/opdahlmann\" target=\"_blank\"><i class=\"fa fa-twitter\"></i></a></li>\r\n      <li> <a href=\"https://www.youtube.com/channel/UC_50wEWI-0xFLfAcbuA7Dzw\" target=\"_blank\"><i class=\"fa fa-youtube\"></i></a></li>\r\n    </ul>\r\n  </div>\r\n</div>\r\n\r\n<script>\r\n  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\r\n    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\r\n    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\r\n  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');\r\n  ga('create', 'UA-90231581-1', 'auto');\r\n  ga('send', 'pageview');\r\n</script>\r\n"
 
 /***/ }),
 
@@ -3132,8 +2998,9 @@ var ClientService = (function () {
     ClientService.prototype.updateClient = function (client) {
         var noUpdateClient = this.clients.filter(function (oldClient) { return oldClient.id === client.id; }).pop();
         noUpdateClient.name = client.name;
-        noUpdateClient.email = client.email;
+        noUpdateClient.telefone = client.telefone;
         noUpdateClient.cpf = client.cpf;
+        noUpdateClient.address = client.address;
     };
     ClientService.prototype.saveClient = function (client) {
         var id = this.clients.slice().pop().id;
@@ -3566,63 +3433,6 @@ SearchService = __decorate([
 ], SearchService);
 
 //# sourceMappingURL=search.service.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/services/settings.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_settings_data__ = __webpack_require__("../../../../../src/app/data/settings.data.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var SettingsService = (function () {
-    function SettingsService() {
-        this.setting = __WEBPACK_IMPORTED_MODULE_1__data_settings_data__["a" /* settings */];
-    }
-    SettingsService.prototype.getSetting = function () {
-        return this.setting;
-    };
-    SettingsService.prototype.addSetting = function (settings) {
-    };
-    SettingsService.prototype.removeSetting = function (setting) {
-        //TODO: Se mais de uma conf então implementar remoção
-        this.initSettings();
-    };
-    SettingsService.prototype.existsSetting = function (setting) {
-    };
-    SettingsService.prototype.updateSettings = function () {
-        this.initSettings();
-        for (var index = 0; index < this.setting.length; index++) {
-            this.setting[index].ip = __WEBPACK_IMPORTED_MODULE_1__data_settings_data__["a" /* settings */][index].ip;
-            this.setting[index].port = __WEBPACK_IMPORTED_MODULE_1__data_settings_data__["a" /* settings */][index].port;
-        }
-    };
-    SettingsService.prototype.initSettings = function () {
-        for (var index = 0; index < this.setting.length; index++) {
-            this.setting[index].ip = '';
-            this.setting[index].port = '';
-        }
-    };
-    return SettingsService;
-}());
-SettingsService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-    __metadata("design:paramtypes", [])
-], SettingsService);
-
-//# sourceMappingURL=settings.service.js.map
 
 /***/ }),
 
